@@ -1,0 +1,19 @@
+header.header
+	.header__inner.site-container
+		.header__top
+			.header__logo
+				a(href="./").header__logo-l
+					include ../../img/MKitchen.svg
+			.header__content
+				.header__nav
+					.header__nav-item
+						a(href="#" class=(pageActive === "homepage" ? "header__nav-link active" : 'header__nav-link') ) Главная
+					.header__nav-item
+						a(href="#").header__nav-link Наше меню
+					.header__nav-item
+						a(href="#").header__nav-link Доставка и оплата
+				.header__btn
+					a(href="#").site-btn.site-btn--transparent.header__btn-i
+						span Хочу пробное блюдо
+
+		.header__bottom

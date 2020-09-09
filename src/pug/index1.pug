@@ -1,0 +1,243 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Home page";
+  - var pageClass = "";
+  - var pageActive = "homepage";
+block content
+  //
+    .b-lazy.webp-img(data-webp="./img/motivated-bg.webp"
+      data-webp-mobile="./img/motivated-bg-mobile.webp"
+      data-img="./img/motivated-bg.png"
+      data-img-mobile="./img/motivated-bg-mobile.png")
+
+    picture
+      source(srcset="./img/logo.webp" type="image/webp")
+      img(src="./img/logo.png" alt="img")
+
+  div.main-wrap
+    .top-block
+      .top-block__inner.site-container
+        .top-block__item
+          .top-block__img
+            picture
+              source(srcset="./img/top-bunner.webp" type="image/webp")
+              img(src="./img/top-bunner.png" alt="img")
+          .top-block__item-body
+            .top-block__title Лучшее питание <br> с доставкой на дом
+            .top-block__txt Наша миссия - быть надежным поставщиком качественных <br> продуктов, готовить которые одно удовольствие.
+            .top-block__btn
+              a(href="#").site-btn.site-btn--yellow.top-block__btn-i
+                span Пробное блюдо
+              a(href="#").site-btn.site-btn--yellow.site-btn--transparent.white.top-block__btn-i
+                span Смотреть меню
+
+    .hiw
+      .hiw__inner.site-container
+        .site-title.hiw__title Как это работает?
+        .hiw__list
+          .hiw__item.hiw__item--1
+            .hiw__item-img
+              img(src="./img/plate-1.svg" alt="plate" width="67" height="67")
+            .hiw__item-title Выбирайте <br> меню и блюда
+            .hiw__item-txt Ингредиенты расфасованы под рецепты,<br> доставка бесплатна.
+          .hiw__item.hiw__item--2
+            .hiw__item-img
+              img(src="./img/plate.svg" alt="plate" width="67" height="67")
+            .hiw__item-title Выбирайте <br> меню и блюда
+            .hiw__item-txt Ингредиенты расфасованы под рецепты,<br> доставка бесплатна.
+          .hiw__item.hiw__item--3
+            .hiw__item-img
+              img(src="./img/plate.svg" alt="plate" width="67" height="67")
+            .hiw__item-title Выбирайте <br> меню и блюда
+            .hiw__item-txt Ингредиенты расфасованы под рецепты,<br> доставка бесплатна.
+
+    .menu
+      .menu__container.site-container
+        .menu__body
+          .menu__body-item
+            .site-title.menu__body-title Меню на 3 - 9 Сентября
+            .menu__body-tab
+              a(href="javascript:void(0)" data-tab-nav="dishes").menu__body-tab-i.active Блюда
+              a(href="javascript:void(0)" data-tab-nav="beverages").menu__body-tab-i Напитки
+            .menu__body-content
+              .menu__body-content-item.active(data-tab-content="dishes")
+                .menu__list.custom-row
+                  .menu__item.custom-col
+                    .menu__item-content
+                      a(href="#").menu__item-img
+                        picture
+                          source(srcset="./img/menu-img-1.webp" type="image/webp")
+                          img(src="./img/menu-img-1.png" alt="img" width="250")
+                      .menu__item-info
+                        .menu__item-category
+                          a(href="javascript:void(0);").menu__item-category-i.blue Основные блюда
+                        a(href="#").menu__item-name Салат с томатами,огурцами, авокадо и фетой
+                        .menu__item-desc 122 кКал, БЖУ: 5.0 / 4.0 / 21.0 <br> (на 100 г блюда)
+                      .menu__item-bottom
+                        .menu__item-price
+                          span 165 UAH
+                        .menu__item-btn
+                          a(href="#").menu__item-btn-i
+                            .menu__item-btn-ico
+                              include ../img/ico/check.svg
+                            span.choose Выбрать
+                            span.added Добавлено
+                  .menu__item.custom-col
+                    .menu__item-content
+                      a(href="#").menu__item-img
+                        picture
+                          source(srcset="./img/menu-img-2.webp" type="image/webp")
+                          img(src="./img/menu-img-2.png" alt="img" width="250")
+                      .menu__item-info
+                        .menu__item-category
+                          a(href="javascript:void(0);").menu__item-category-i.green Салаты
+                        a(href="#").menu__item-name Салат с томатами,огурцами, авокадо и фетой
+                        .menu__item-desc 122 кКал, БЖУ: 5.0 / 4.0 / 21.0 <br> (на 100 г блюда)
+                      .menu__item-bottom
+                        .menu__item-price
+                          span 165 UAH
+                        .menu__item-btn
+                          a(href="#").menu__item-btn-i.menu__item-btn-i--added
+                            .menu__item-btn-ico
+                              include ../img/ico/check.svg
+                            span.choose Выбрать
+                            span.added Добавлено
+                  .menu__item.custom-col
+                    .menu__item-content
+                      a(href="#").menu__item-img
+                        picture
+                          source(srcset="./img/menu-img-3.webp" type="image/webp")
+                          img(src="./img/menu-img-3.png" alt="img" width="250")
+                      .menu__item-info
+                        .menu__item-category
+                          a(href="javascript:void(0);").menu__item-category-i.red Закуски
+                        a(href="#").menu__item-name Салат с томатами,огурцами, авокадо и фетой
+                        .menu__item-desc 122 кКал, БЖУ: 5.0 / 4.0 / 21.0 <br> (на 100 г блюда)
+                      .menu__item-bottom
+                        .menu__item-price
+                          span 165 UAH
+                        .menu__item-btn
+                          a(href="#").menu__item-btn-i
+                            .menu__item-btn-ico
+                              include ../img/ico/check.svg
+                            span.choose Выбрать
+                            span.added Добавлено
+                  .menu__item.custom-col
+                    .menu__item-content
+                      a(href="#").menu__item-img
+                        picture
+                          source(srcset="./img/menu-img-4.webp" type="image/webp")
+                          img(src="./img/menu-img-4.png" alt="img" width="250")
+                      .menu__item-info
+                        .menu__item-category
+                          a(href="javascript:void(0);").menu__item-category-i.blue Основные блюда
+                        a(href="#").menu__item-name Салат с томатами,огурцами, авокадо и фетой
+                        .menu__item-desc 122 кКал, БЖУ: 5.0 / 4.0 / 21.0 <br> (на 100 г блюда)
+                      .menu__item-bottom
+                        .menu__item-price
+                          span 165 UAH
+                        .menu__item-btn
+                          a(href="#").menu__item-btn-i
+                            .menu__item-btn-ico
+                              include ../img/ico/check.svg
+                            span.choose Выбрать
+                            span.added Добавлено
+                  .menu__item.custom-col
+                    .menu__item-content
+                      a(href="#").menu__item-img
+                        picture
+                          source(srcset="./img/menu-img-5.webp" type="image/webp")
+                          img(src="./img/menu-img-5.png" alt="img" width="250")
+                      .menu__item-info
+                        .menu__item-category
+                          a(href="javascript:void(0);").menu__item-category-i.green Салаты
+                        a(href="#").menu__item-name Салат с томатами,огурцами, авокадо и фетой
+                        .menu__item-desc 122 кКал, БЖУ: 5.0 / 4.0 / 21.0 <br> (на 100 г блюда)
+                      .menu__item-bottom
+                        .menu__item-price
+                          span 165 UAH
+                        .menu__item-btn
+                          a(href="#").menu__item-btn-i.menu__item-btn-i--added
+                            .menu__item-btn-ico
+                              include ../img/ico/check.svg
+                            span.choose Выбрать
+                            span.added Добавлено
+                  .menu__item.custom-col
+                    .menu__item-content
+                      a(href="#").menu__item-img
+                        picture
+                          source(srcset="./img/menu-img-6.webp" type="image/webp")
+                          img(src="./img/menu-img-6.png" alt="img" width="250")
+                      .menu__item-info
+                        .menu__item-category
+                          a(href="javascript:void(0);").menu__item-category-i.red Закуски
+                        a(href="#").menu__item-name Салат с томатами,огурцами, авокадо и фетой
+                        .menu__item-desc 122 кКал, БЖУ: 5.0 / 4.0 / 21.0 <br> (на 100 г блюда)
+                      .menu__item-bottom
+                        .menu__item-price
+                          span 165 UAH
+                        .menu__item-btn
+                          a(href="#").menu__item-btn-i
+                            .menu__item-btn-ico
+                              include ../img/ico/check.svg
+                            span.choose Выбрать
+                            span.added Добавлено
+              .menu__body-content-item(data-tab-content="beverages")
+                .menu__list.custom-row
+                  .menu__item.custom-col
+                    .menu__item-content
+                      a(href="#").menu__item-img
+                        picture
+                          source(srcset="./img/menu-img-1.webp" type="image/webp")
+                          img(src="./img/menu-img-1.png" alt="img" width="250")
+                      .menu__item-info
+                        .menu__item-category
+                          a(href="javascript:void(0);").menu__item-category-i.blue Основные блюда
+                        a(href="#").menu__item-name Салат с томатами,огурцами, авокадо и фетой
+                        .menu__item-desc 122 кКал, БЖУ: 5.0 / 4.0 / 21.0 <br> (на 100 г блюда)
+                      .menu__item-bottom
+                        .menu__item-price
+                          span 165 UAH
+                        .menu__item-btn
+                          a(href="#").menu__item-btn-i
+                            .menu__item-btn-ico
+                              include ../img/ico/check.svg
+                            span.choose Выбрать
+                            span.added Добавлено
+                  .menu__item.custom-col
+                    .menu__item-content
+                      a(href="#").menu__item-img
+                        picture
+                          source(srcset="./img/menu-img-2.webp" type="image/webp")
+                          img(src="./img/menu-img-2.png" alt="img" width="250")
+                      .menu__item-info
+                        .menu__item-category
+                          a(href="javascript:void(0);").menu__item-category-i.green Салаты
+                        a(href="#").menu__item-name Салат с томатами,огурцами, авокадо и фетой
+                        .menu__item-desc 122 кКал, БЖУ: 5.0 / 4.0 / 21.0 <br> (на 100 г блюда)
+                      .menu__item-bottom
+                        .menu__item-price
+                          span 165 UAH
+                        .menu__item-btn
+                          a(href="#").menu__item-btn-i.menu__item-btn-i--added
+                            .menu__item-btn-ico
+                              include ../img/ico/check.svg
+                            span.choose Выбрать
+                            span.added Добавлено
+
+          .info-block
+            .info-block__txt
+              .info-block__title Мы - доставка только лучшего питания
+              p Наша миссия - быть для вас надежным поставщиком качественных продуктов, готовить которые одно удовольствие.
+              .info-block__btn
+                a(href="#").info-block__btn-i.site-btn.site-btn--yellow.site-btn--transparent
+                  span Больше о нашей миссии
+            .info-block__img
+              picture
+                source(srcset="./img/info-block-img.webp" type="image/webp")
+                img(src="./info-block-img.png" alt="img" width="550" height="360")
+
+
+
+
