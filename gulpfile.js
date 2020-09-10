@@ -72,6 +72,7 @@ gulp.task('css-libs', () => {
       // 'node_modules/owl.carousel/dist/assets/owl.carousel.css',
       // 'node_modules/aos/dist/aos.css',
       // 'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css'
+      'node_modules/swiper/swiper-bundle.min.css',
   ])
     .pipe(gulp.dest('dist/css/libs/'))
     .pipe(concat('libs.css'))
@@ -97,6 +98,7 @@ gulp.task('js-libs', () => {
       // 'node_modules/skrollr/dist/skrollr.min.js',
       // 'node_modules/aos/dist/aos.js',
       // 'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js',
+      'node_modules/swiper/swiper-bundle.min.js',
     ])
     .pipe(gulp.dest('dist/js/libs/'))
     .pipe(concat('libs.js'))

@@ -1,0 +1,114 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Delivery and payment";
+  - var pageClass = "";
+  - var pageActive = "delivery";
+block content
+
+  div.main-wrap
+    .delivery
+      .delivery__inner.site-container
+        .delivery__title.site-title.site-title--big
+          span Все о Home Chef
+          | Доставка<br> лучшего питания
+        .delivery__desc.site-desc Наша миссия - быть для вас надежным поставщиком качественных<br> продуктов, готовить которые одно удовольствие.
+        .delivery__img
+          picture
+            source(srcset="./img/delivery-top.webp" type="image/webp")
+            img(src="./img/delivery-top.png" alt="img" width="1160")
+        .delivery__list-wrap
+          .delivery__list.custom-row
+            .delivery__item.custom-col
+              .delivery__item-content
+                .delivery__item-ico
+                  picture
+                    source(srcset="./img/ico/delivery-1.webp" type="image/webp")
+                    img(src="./img/delivery-1.png" alt="img" height="36")
+                .delivery__item-name Мы работаем ежедневно<br> с 08:00-22:00
+                .delivery__item-desc Сделать заказ на сайте<br> вы можете в любое время.
+            .delivery__item.custom-col
+              .delivery__item-content
+                .delivery__item-ico
+                  picture
+                    source(srcset="./img/ico/delivery-2.webp" type="image/webp")
+                    img(src="./img/delivery-2.png" alt="img" height="36")
+                .delivery__item-name Заказы общей<br> стоимостью от 599 грн.
+                .delivery__item-desc Доставим по Харькову<br> бесплатно
+            .delivery__item.custom-col
+              .delivery__item-content
+                .delivery__item-ico
+                  picture
+                    source(srcset="./img/ico/delivery-3.webp" type="image/webp")
+                    img(src="./img/delivery-3.png" alt="img" height="30")
+                .delivery__item-name Оплачивайте любым удобным<br> способом
+                .delivery__item-desc Сделать заказ на сайте<br> вы можете в любое время.
+            .delivery__item.custom-col
+              .delivery__item-content
+                .delivery__item-ico
+                  picture
+                    source(srcset="./img/ico/delivery-1.webp" type="image/webp")
+                    img(src="./img/delivery-1.png" alt="img" height="36")
+                .delivery__item-name Заказы общей<br> стоимостью от 599 грн.
+                .delivery__item-desc Доставим по Харькову<br> бесплатно
+
+    .why-we
+      .why-we__inner.site-container
+        .why-we__title.site-title Почему мы?
+        .why-we__desc.site-desc
+          | Курьер привозит продукты в крафт-пакетах – привычно и удобно, как обычная доставка из<br>
+          | магазина. Один пакет нужно сразу убрать в морозилку. Каждое блюдо – в своем крафт<br>
+          | пакете. На нем отмечено, когда приготовить. Курьер привозит продукты в крафт-пакетах –<br>
+          | привычно и удобно, как обычная доставка из магазина.
+
+        .why-we__img
+          picture
+            source(srcset="./img/why-we.webp" type="image/webp")
+            img(src="./img/why-we.png" alt="img" width="1160")
+          .why-we__img-content
+            .why-we__img-title Мы - доставка только<br> лучшего питания
+            .why-we__img-txt
+              | Курьер привозит продукты в крафт-пакетах – привычно и удобно, как обычная доставка из магазина. Один пакет нужно сразу убрать в морозилку.<br>
+              | Каждое блюдо – в своем крафт-пакете. На нем отмечено, когда приготовить.
+
+    .theses
+      .theses__inner.site-container
+        .theses__list.custom-row
+          .theses__item.custom-col
+            .theses__name Что-то еще
+            .theses__desc Написать здесь
+          .theses__item.custom-col
+            .theses__name Что-то еще
+            .theses__desc Написать здесь
+          .theses__item.custom-col
+            .theses__name Новое меню
+            .theses__desc Каждую неделю
+
+    .order-question
+      .order-question__inner.site-container
+        .order-question__list
+          .order-question__item.order-question__item--order
+            .order-question__item-content
+              .order-question__img
+                include ../img/ico/big-plate.svg
+              .order-question__title Готовы сделать заказ?
+              .order-question__desc Посмотрите наше меню.
+              .order-question__btn
+                a(href="./our-menu.html").site-btn.site-btn--white.order-question__btn-i
+                  span Сделать заказ
+          .order-question__item.order-question__item--question
+            .order-question__item-content
+              .order-question__img
+                include ../img/ico/letter.svg
+              .order-question__title У вас есть вопросы насчет<br> нашей работы?
+              .order-question__desc Будем рады ответить.
+              .order-question__btn
+                a(href="#").site-btn.site-btn--grey.order-question__btn-i
+                  span
+                    include ../img/ico/tg-btn.svg
+                    | Связаться
+
+    .delivery-menu
+      .delivery-menu__inner.site-container
+        .delivery-menu__body
+          include modules/_menu

@@ -1,0 +1,89 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Card page";
+  - var pageClass = "card-page";
+  - var pageActive = "card-page";
+block content
+
+  div.main-wrap
+    .breadcrumb
+      .breadcrumb__inner
+        a(href="./").breadcrumb__i я
+        a(href="./our-menu.html").breadcrumb__i Меню
+        span.breadcrumb__i Рис с лососем, брокколи и томатами
+
+    .card-detail
+      .card-detail__inner.site-container
+        .card-detail__content
+          .card-detail__img
+            picture
+              source(srcset="./img/card-detail-img.webp" type="image/webp")
+              img(src="./img/card-detail-img.png" alt="img" width="300")
+          .card-detail__info
+            .menu__item-category.card-detail__category
+              a(href="javascript:void(0);").menu__item-category-i.blue Основные блюда
+            .card-detail__name
+            .card-detail__row-info
+              span Готовить с 1 по 7 день
+              span
+                include ../img/ico/mini-plate.svg
+                | 250 г
+              span
+                include ../img/ico/mini-watch.svg
+                | 45 мин
+
+            .card-detail__bottom
+              .card-detail__bottom-col
+                .card-detail__price 265 UAH
+                .card-detail__price-desc Цена за 1 порцию /
+                  span 250г
+              .card-detail__bottom-btn
+                a(href="#").card-detail__bottom-btn-i.site-btn.site-btn--yellow
+                  span Добавить к заказу
+
+        .card-detail__tab-wrap
+
+          .card-detail__tab
+            a(href="javascript:void(0);").card-detail__tab-i.active Мы привезем
+            a(href="javascript:void(0);").card-detail__tab-i Дома должно быть
+            a(href="javascript:void(0);").card-detail__tab-i Калории и БЖУ
+
+          .card-detail__tab-list
+            .card-detail__tab-item
+              .card-detail__tab-row
+                span Говядина мякоть
+                span 250г
+              .card-detail__tab-row
+                span Лук репчатый 90-150 гр
+                span 1 шт
+              .card-detail__tab-row
+                span Лук репчатый 90-150 гр
+                span 1 шт
+              .card-detail__tab-row
+                span Лук репчатый 90-150 гр
+                span 1 шт
+              .card-detail__tab-row
+                span Лук репчатый 90-150 гр
+                span 1 шт
+              .card-detail__tab-row
+                span Лук репчатый 90-150 гр
+                span 1 шт
+            .card-detail__tab-item
+              .card-detail__tab-row
+                span Говядина мякоть
+                span 250г
+              .card-detail__tab-row
+                span Лук репчатый 90-150 гр
+                span 1 шт
+              .card-detail__tab-row
+                span Лук репчатый 90-150 гр
+                span 1 шт
+            .card-detail__tab-item
+              .card-detail__tab-row
+                span Говядина мякоть
+                span 250г
+              .card-detail__tab-row
+                span Лук репчатый 90-150 гр
+                span 1 шт
+

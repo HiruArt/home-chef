@@ -187,8 +187,24 @@ $(document).ready(function () {
 
   });
 
+  var menuSlider = new Swiper('.menu-slider-js', {
+    // Optional parameters
+    autoHeight: true, //enable auto height
+    loop: false,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.custom-button-next',
+      prevEl: '.custom-button-prev',
+    },
+
+    calculateHeight:true,
+
+  })
+
 
   $(document).on('click', '[data-tab-nav]', function (e) {
+    e.preventDefault();
     var tab = $(this).attr('data-tab-nav');
     var content = $(this).closest('.menu__body-item').find('[data-tab-content="'+ tab +'"]');
 
@@ -197,7 +213,16 @@ $(document).ready(function () {
     $(this).closest('.menu__body-item').find('[data-tab-content]').removeClass('active');
     $(content).addClass('active');
 
+    menuSlider.updateAutoHeight(300);
+
   })
+
+  $(document).on('click', '.menu__item-btn-i', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('menu__item-btn-i--added');
+  })
+
+
 });
 
 
