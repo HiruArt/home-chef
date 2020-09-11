@@ -223,6 +223,50 @@ $(document).ready(function () {
   })
 
 
+  if($('[data-tab-card-content]').length > 0){
+
+    $('.active[data-tab-card-content]').slideToggle();
+
+    $(document).on('click', '[data-tab-card]', function (e) {
+      e.preventDefault();
+      var tab = $(this).attr('data-tab-card');
+      $('[data-tab-card]').removeClass('active');
+      $(this).addClass('active');
+      $('.active[data-tab-card-content]').slideToggle();
+      $('.active[data-tab-card-content]').removeClass('active');
+      setTimeout(function () {
+        $('[data-tab-card-content="'+ tab + '"]').slideToggle();
+        $('[data-tab-card-content="'+ tab + '"]').addClass('active');
+      },300);
+    })
+  }
+
+
+  // basket-count
+  $(document).on('click', '.basket-count button', function (e) {
+    var value = $(this).siblings('input').val();
+
+    console.log('')
+    if($(this).hasClass('minus')){
+      value--;
+      $(this).siblings('input').val(value);
+    } else {
+      value++;
+      $(this).siblings('input').val(value);
+    }
+  });
+
+  (function($){
+    $(window).on("load",function(){
+      $(".top-basket-scroll-js").mCustomScrollbar({
+        axis:"x",
+        theme:"light-3",
+        autoHideScrollbar: true
+      });
+    });
+  })(jQuery);
+
+
 });
 
 

@@ -16,4 +16,102 @@ header.header
 					a(href="#").site-btn.site-btn--transparent.header__btn-i
 						span Хочу пробное блюдо
 
-		.header__bottom
+
+	if (pageActive === "topBasket")
+		.header__basket
+			.top-basket
+				.top-basket__inner.site-container
+					.top-basket__list-wrap
+						.top-basket__list
+							.top-basket__item
+								.top-basket__item-content
+									.top-basket__item-img
+										picture
+											source(srcset="./img/top-basket-img.webp" type="image/webp")
+											img(src="./img/top-basket-img.png" alt="img" width="64")
+									.top-basket__item-info
+										.top-basket__item-name Рис с лососем, брокколи и томатами
+										.top-basket__item-row
+											.top-basket__item-price 1x
+												span 165 UAH
+											.top-basket__item-count.basket-count
+												button(type="button").basket-count__btn.minus
+													include ../../img/ico/minus.svg
+												input(type="text" value="1").basket-count__input
+												button(type="button").basket-count__btn.plus
+													include ../../img/ico/plus.svg
+									.top-basket__item-btn
+										a(href="javascript:void(0);").top-basket__item-btn-delete
+											include ../../img/ico/del-ico.svg
+							.top-basket__item
+								.top-basket__item-content
+									.top-basket__item-img
+										picture
+											source(srcset="./img/top-basket-img.webp" type="image/webp")
+											img(src="./img/top-basket-img.png" alt="img" width="64")
+									.top-basket__item-info
+										.top-basket__item-name Рис с лососем, брокколи и томатами
+										.top-basket__item-row
+											.top-basket__item-price 1x
+												span 165 UAH
+											.top-basket__item-count.basket-count
+												button(type="button").basket-count__btn.minus
+													include ../../img/ico/minus.svg
+												input(type="text" value="1").basket-count__input
+												button(type="button").basket-count__btn.plus
+													include ../../img/ico/plus.svg
+									.top-basket__item-btn
+										a(href="javascript:void(0);").top-basket__item-btn-delete
+											include ../../img/ico/del-ico.svg
+							.top-basket__item
+								.top-basket__item-content
+									.top-basket__item-img
+										picture
+											source(srcset="./img/top-basket-img.webp" type="image/webp")
+											img(src="./img/top-basket-img.png" alt="img" width="64")
+									.top-basket__item-info
+										.top-basket__item-name Рис с лососем, брокколи и томатами
+										.top-basket__item-row
+											.top-basket__item-price 1x
+												span 165 UAH
+											.top-basket__item-count.basket-count
+												button(type="button").basket-count__btn.minus
+													include ../../img/ico/minus.svg
+												input(type="text" value="1").basket-count__input
+												button(type="button").basket-count__btn.plus
+													include ../../img/ico/plus.svg
+									.top-basket__item-btn
+										a(href="javascript:void(0);").top-basket__item-btn-delete
+											include ../../img/ico/del-ico.svg
+							.top-basket__item
+								.top-basket__item-content
+									.top-basket__item-img
+										picture
+											source(srcset="./img/top-basket-img.webp" type="image/webp")
+											img(src="./img/top-basket-img.png" alt="img" width="64")
+									.top-basket__item-info
+										.top-basket__item-name Рис с лососем, брокколи и томатами
+										.top-basket__item-row
+											.top-basket__item-price 1x
+												span 165 UAH
+											.top-basket__item-count.basket-count
+												button(type="button").basket-count__btn.minus
+													include ../../img/ico/minus.svg
+												input(type="text" value="1").basket-count__input
+												button(type="button").basket-count__btn.plus
+													include ../../img/ico/plus.svg
+									.top-basket__item-btn
+										a(href="javascript:void(0);").top-basket__item-btn-delete
+											include ../../img/ico/del-ico.svg
+					.top-basket__info
+						.top-basket__info-price Сумма: <br>
+							span 565 UAH
+						.top-basket__info-btn
+							a(href="#").top-basket__info-btn-i.site-btn.site-btn--yellow.site-btn--yellow-light
+								span Посмотреть заказ
+							a(href="./cart.html").top-basket__info-btn-i.site-btn.site-btn--yellow
+								span Оформить заказ
+
+	else
+		.header__basket.header__basket--empty
+

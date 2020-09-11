@@ -1,0 +1,134 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Сart page";
+  - var pageClass = "cartPage";
+  - var pageActive = "cartPage";
+block content
+
+  div.main-wrap
+    .cart
+      .cart__inner.site-container
+        .cart__head.site-head
+          .cart__head-logo
+            a(href="./").header__logo-l
+              include ../img/MKitchen.svg
+          .cart__head-btn
+            a(href="./").cart__head-btn-i.site-btn.site-btn--transparent
+              span Обратно на сайт
+
+        .cart__content
+          .cart__order
+            .cart__order-inner
+              .cart__order-title Ваш заказ
+              .cart__order-list
+                .top-basket__item.cart__order-item
+                  .top-basket__item-content
+                    .top-basket__item-img
+                      picture
+                        source(srcset="./img/top-basket-img.webp" type="image/webp")
+                        img(src="./img/top-basket-img.png" alt="img" width="64")
+                    .top-basket__item-info
+                      .top-basket__item-name Рис с лососем, брокколи и томатами
+                      .top-basket__item-row
+                        .top-basket__item-price 1x
+                          span 165 UAH
+                        .top-basket__item-count.basket-count
+                          button(type="button").basket-count__btn.minus
+                            include ../img/ico/minus.svg
+                          input(type="text" value="1").basket-count__input
+                          button(type="button").basket-count__btn.plus
+                            include ../img/ico/plus.svg
+                    .top-basket__item-btn
+                      a(href="javascript:void(0);").top-basket__item-btn-delete
+                        include ../img/ico/del-ico.svg
+              .cart__order-total
+                .cart__order-total-txt Всего:
+                .cart__order-total-price 565 UAH
+          .cart__personal
+            .cart__personal-tab
+              .cart__personal-tab-i.active
+                span 1
+                | Номер телефона
+              .cart__personal-tab-i
+                span 2
+                | Код
+              .cart__personal-tab-i
+                span 3
+                | Доставка
+              .cart__personal-tabi
+                span 1
+                | Оплата
+
+            .cart__personal-step.active
+              .cart__personal-title Ваш номер телефона
+              .cart__personal-txt Для оформлениия заказа ведите Ваш номер телефона.
+              .site-from__row
+                .site-from__input
+                  input(type="text")
+              .site-from__row
+                .site-from__btn
+                  button.site-btn.site-from__btn-i
+                    span Отправить
+
+            .cart__personal-step
+              .cart__personal-title Введите код подтверждения
+              .cart__personal-txt Код пришел на + 380 956 184 307
+              a(href="javascript:void(0)").cart__personal-back-link
+                include ../img/ico/back.svg
+                | Назад
+              .site-from__row
+                .site-from__input
+                  input(type="text" placeholder="1234")
+              .site-from__row
+                .site-from__btn
+                  button.site-btn.site-from__btn-i
+                    span Отправить
+
+              .cart__personal-question
+                span Не получили код?
+                a(href="#") Отправить еще раз.
+
+
+            .cart__personal-step
+              .cart__personal-title Дата и адрес доставки
+              a(href="javascript:void(0)").cart__personal-back-link
+                include ../img/ico/back.svg
+                | Назад
+              .site-from__row
+                .site-from__input
+                  label(for="personalName") Имя:
+                  input(type="text" placeholder="1234" id="personalName")
+              .site-from__row
+                .site-from__input
+                  label(for="personalCity") Город:
+                  input(type="text" placeholder="1234" id="personalCity" value="Харьков")
+              .site-from__row
+                .site-from__input.site-from__input--66
+                  label(for="personalStreet") Улица:
+                  input(type="text" placeholder="1234" id="personalStreet")
+                .site-from__input.site-from__input--33
+                  label(for="personalHouse") Дом:
+                  input(type="text" placeholder="1234" id="personalHouse")
+              .site-from__row
+                .site-from__input.site-from__input--33
+                  label(for="personalEntrance") Улица:
+                  input(type="text" placeholder="1234" id="personalEntrance" )
+                .site-from__input.site-from__input--33
+                  label(for="personalApartment") Дом:
+                  input(type="text" placeholder="1234" id="personalApartment" )
+              .site-from__hr
+              .site-from__row
+                .site-from__input.site-from__input--50
+
+                .site-from__input.site-from__input--50
+              .site-from__hr
+              .site-from__row
+                .site-from__btn
+                  button.site-btn.site-from__btn-i
+                    span Отправить
+
+              .cart__personal-question
+                span Не получили код?
+                a(href="#") Отправить еще раз.
+

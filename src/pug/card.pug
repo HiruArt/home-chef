@@ -8,13 +8,13 @@ block content
 
   div.main-wrap
     .breadcrumb
-      .breadcrumb__inner
-        a(href="./").breadcrumb__i я
+      .breadcrumb__inner.site-container
+        a(href="./").breadcrumb__i Главная
         a(href="./our-menu.html").breadcrumb__i Меню
         span.breadcrumb__i Рис с лососем, брокколи и томатами
 
     .card-detail
-      .card-detail__inner.site-container
+      .card-detail__inner
         .card-detail__content
           .card-detail__img
             picture
@@ -23,7 +23,7 @@ block content
           .card-detail__info
             .menu__item-category.card-detail__category
               a(href="javascript:void(0);").menu__item-category-i.blue Основные блюда
-            .card-detail__name
+            .card-detail__name Рис с лососем, брокколи и томатами
             .card-detail__row-info
               span Готовить с 1 по 7 день
               span
@@ -39,18 +39,21 @@ block content
                 .card-detail__price-desc Цена за 1 порцию /
                   span 250г
               .card-detail__bottom-btn
-                a(href="#").card-detail__bottom-btn-i.site-btn.site-btn--yellow
+                a(href="./top-basket.html").card-detail__bottom-btn-i.site-btn.site-btn--yellow
                   span Добавить к заказу
 
-        .card-detail__tab-wrap
+        .card-detail__tab
+          .card-detail__tab-link
+            a(href="javascript:void(0);" data-tab-card="we-will-deliver").card-detail__tab-i.active Мы привезем
+          .card-detail__tab-link
+            a(href="javascript:void(0);" data-tab-card="home-should-be").card-detail__tab-i Дома должно быть
+          .card-detail__tab-link
+            a(href="javascript:void(0);" data-tab-card="calories-and-bju").card-detail__tab-i Калории и БЖУ
 
-          .card-detail__tab
-            a(href="javascript:void(0);").card-detail__tab-i.active Мы привезем
-            a(href="javascript:void(0);").card-detail__tab-i Дома должно быть
-            a(href="javascript:void(0);").card-detail__tab-i Калории и БЖУ
-
+      .card-detail__tab-wrap
+        .card-detail__tab-inner.site-container
           .card-detail__tab-list
-            .card-detail__tab-item
+            .card-detail__tab-item.active(data-tab-card-content="we-will-deliver")
               .card-detail__tab-row
                 span Говядина мякоть
                 span 250г
@@ -69,7 +72,7 @@ block content
               .card-detail__tab-row
                 span Лук репчатый 90-150 гр
                 span 1 шт
-            .card-detail__tab-item
+            .card-detail__tab-item(data-tab-card-content="home-should-be")
               .card-detail__tab-row
                 span Говядина мякоть
                 span 250г
@@ -79,11 +82,23 @@ block content
               .card-detail__tab-row
                 span Лук репчатый 90-150 гр
                 span 1 шт
-            .card-detail__tab-item
+            .card-detail__tab-item(data-tab-card-content="calories-and-bju")
+              .card-detail__tab-head На 100 г блюда:
               .card-detail__tab-row
-                span Говядина мякоть
-                span 250г
+                span Белки
+                span 8.12 г
               .card-detail__tab-row
-                span Лук репчатый 90-150 гр
-                span 1 шт
+                span Жиры
+                span 6.41 г
+              .card-detail__tab-row
+                span Углеводы
+                span 12.9 г
+              .card-detail__tab-row
+                span Калорийность
+                span 138.9 ккал
+
+    .our-menu-block
+      .our-menu-block__inner.site-container
+        .our-menu-block__body
+          include modules/_menu
 
