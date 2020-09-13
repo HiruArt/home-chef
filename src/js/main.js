@@ -246,10 +246,13 @@ $(document).ready(function () {
   $(document).on('click', '.basket-count button', function (e) {
     var value = $(this).siblings('input').val();
 
-    console.log('')
     if($(this).hasClass('minus')){
-      value--;
-      $(this).siblings('input').val(value);
+      if ($(this).siblings('input').val() <= 0){
+        $(this).siblings('input').val(0);
+      } else{
+        value--;
+        $(this).siblings('input').val(value);
+      }
     } else {
       value++;
       $(this).siblings('input').val(value);
@@ -266,6 +269,7 @@ $(document).ready(function () {
     });
   })(jQuery);
 
+  $('#cartDate, #cartTime, #country').selectmenu();
 
 });
 

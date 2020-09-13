@@ -98,37 +98,92 @@ block content
               .site-from__row
                 .site-from__input
                   label(for="personalName") Имя:
-                  input(type="text" placeholder="1234" id="personalName")
+                  input(type="text" id="personalName")
               .site-from__row
                 .site-from__input
                   label(for="personalCity") Город:
-                  input(type="text" placeholder="1234" id="personalCity" value="Харьков")
+                  input(type="text" id="personalCity" value="Харьков")
               .site-from__row
                 .site-from__input.site-from__input--66
                   label(for="personalStreet") Улица:
-                  input(type="text" placeholder="1234" id="personalStreet")
+                  input(type="text" id="personalStreet")
                 .site-from__input.site-from__input--33
                   label(for="personalHouse") Дом:
-                  input(type="text" placeholder="1234" id="personalHouse")
+                  input(type="text" id="personalHouse")
               .site-from__row
                 .site-from__input.site-from__input--33
                   label(for="personalEntrance") Улица:
-                  input(type="text" placeholder="1234" id="personalEntrance" )
+                  input(type="text" id="personalEntrance" )
                 .site-from__input.site-from__input--33
                   label(for="personalApartment") Дом:
-                  input(type="text" placeholder="1234" id="personalApartment" )
+                  input(type="text" id="personalApartment" )
               .site-from__hr
               .site-from__row
-                .site-from__input.site-from__input--50
-
-                .site-from__input.site-from__input--50
+                .site-from__select.site-from__input--50
+                  label(for="cartDate") Дата доставки:
+                  select#cartDate
+                    option(value="22 Июня 2020" selected="selected") 22 Июня 2020
+                    option(value="23 Июня 2020") 23 Июня 2020
+                    option(value="24 Июня 2020") 24 Июня 2020
+                .site-from__select.site-from__input--50
+                  label(for="cartTime") Дата доставки:
+                  select#cartTime
+                    option(value="09:00 до 12:00" selected="selected") С 09:00 до 12:00
+                    option(value="12:00 до 15:00") С 12:00 до 15:00
+                    option(value="15:00 до 18:00") С 15:00 до 18:00
+                    option(value="18:00 до 21:00") С 18:00 до 21:00
+                    option(value="21:00 до 00:00") С 21:00 до 00:00
               .site-from__hr
+              .site-from__row
+                .site-from__checkbox
+                  input#callbackCheckbox(type="checkbox" checked="checked")
+                  label(for="callbackCheckbox") Не перезванивайте мне, я уверен(а) в заказе.
               .site-from__row
                 .site-from__btn
                   button.site-btn.site-from__btn-i
-                    span Отправить
+                    span Продолжить
 
-              .cart__personal-question
-                span Не получили код?
-                a(href="#") Отправить еще раз.
+
+            .cart__personal-step
+              .cart__personal-title Оплата
+              .site-from__row
+                .site-from__radio
+                  input(type="radio" id="onlinePay" name="payment" checked="checked")
+                  label(for="onlinePay") Онлайн-оплата
+              .site-from__row
+                .site-from__input.site-from__input--50
+                  label(for="NumberCard") Номер карты
+                  input(type="text" id="NumberCard" )
+                .site-from__select.site-from__input--50
+                  label(for="cartTime") Страна, регион
+                  select#country
+                    option(value="ua") Украина
+                    option(value="pl") Польша
+                    option(value="ru") Россия
+              .site-form__row
+                .site-from__input.site-from__input--50
+                  label(for="nameCard") Имя на карте
+                  input(type="text" id="nameCard" )
+                .site-from__input.site-from__input--25
+                  label(for="mmyy") MM/YY
+                  input(type="text" id="mmyy" )
+                .site-from__input.site-from__input--25
+                  label(for="cwcvc") CVV / CVC
+                  input(type="password" id="cwcvc" )
+              .site-form__row
+                .site-from__radio
+                  input(type="radio" id="cash" name="payment")
+                  label(for="cash") ОНаличными при получении
+                .site-from__radio
+                  input(type="radio" id="card" name="payment")
+                  label(for="card") Картой при получении
+                .site-from__radio
+                  input(type="radio" id="LiqPay" name="payment")
+                  label(for="LiqPay") LiqPay
+
+              .site-from__btn
+                button.site-btn.site-from__btn-i
+                  span Оформить заказ
+
+
 
