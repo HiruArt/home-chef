@@ -3,6 +3,7 @@ extends _layout
 block vars
   - var pageTitle = "Сart page";
   - var pageClass = "cartPage";
+  - var headerView = false;
   - var pageActive = "cartPage";
 block content
 
@@ -11,178 +12,274 @@ block content
       .cart__inner.site-container
         .cart__head.site-head
           .cart__head-logo
-            a(href="./").header__logo-l
+            .header__logo-l
               include ../img/MKitchen.svg
           .cart__head-btn
-            a(href="./").cart__head-btn-i.site-btn.site-btn--transparent
+            a(href="./index1.html").cart__head-btn-i.site-btn.site-btn--transparent
               span Обратно на сайт
 
         .cart__content
           .cart__order
             .cart__order-inner
               .cart__order-title Ваш заказ
-              .cart__order-list
-                .top-basket__item.cart__order-item
-                  .top-basket__item-content
-                    .top-basket__item-img
-                      picture
-                        source(srcset="./img/top-basket-img.webp" type="image/webp")
-                        img(src="./img/top-basket-img.png" alt="img" width="64")
-                    .top-basket__item-info
-                      .top-basket__item-name Рис с лососем, брокколи и томатами
-                      .top-basket__item-row
-                        .top-basket__item-price 1x
-                          span 165 UAH
-                        .top-basket__item-count.basket-count
-                          button(type="button").basket-count__btn.minus
-                            include ../img/ico/minus.svg
-                          input(type="text" value="1").basket-count__input
-                          button(type="button").basket-count__btn.plus
-                            include ../img/ico/plus.svg
-                    .top-basket__item-btn
-                      a(href="javascript:void(0);").top-basket__item-btn-delete
-                        include ../img/ico/del-ico.svg
+              .cart__order-list-wrap.cart-scroll-js
+                .cart__order-list
+                  .top-basket__item.cart__order-item
+                    .top-basket__item-content
+                      .top-basket__item-img
+                        picture
+                          source(srcset="./img/top-basket-img.webp" type="image/webp")
+                          img(src="./img/top-basket-img.png" alt="img" width="64")
+                      .top-basket__item-info
+                        .top-basket__item-name Рис с лососем, брокколи и томатами
+                        .top-basket__item-row
+                          .top-basket__item-price 1x
+                            span 165 UAH
+                          .top-basket__item-count.basket-count
+                            button(type="button").basket-count__btn.minus
+                              include ../img/ico/minus.svg
+                            input(type="text" value="1").basket-count__input
+                            button(type="button").basket-count__btn.plus
+                              include ../img/ico/plus.svg
+                      .top-basket__item-btn
+                        a(href="javascript:void(0);").top-basket__item-btn-delete
+                          include ../img/ico/del-ico.svg
+                  .top-basket__item.cart__order-item
+                    .top-basket__item-content
+                      .top-basket__item-img
+                        picture
+                          source(srcset="./img/top-basket-img.webp" type="image/webp")
+                          img(src="./img/top-basket-img.png" alt="img" width="64")
+                      .top-basket__item-info
+                        .top-basket__item-name Рис с лососем, брокколи и томатами
+                        .top-basket__item-row
+                          .top-basket__item-price 1x
+                            span 165 UAH
+                          .top-basket__item-count.basket-count
+                            button(type="button").basket-count__btn.minus
+                              include ../img/ico/minus.svg
+                            input(type="text" value="1").basket-count__input
+                            button(type="button").basket-count__btn.plus
+                              include ../img/ico/plus.svg
+                      .top-basket__item-btn
+                        a(href="javascript:void(0);").top-basket__item-btn-delete
+                          include ../img/ico/del-ico.svg
+                  .top-basket__item.cart__order-item
+                    .top-basket__item-content
+                      .top-basket__item-img
+                        picture
+                          source(srcset="./img/top-basket-img.webp" type="image/webp")
+                          img(src="./img/top-basket-img.png" alt="img" width="64")
+                      .top-basket__item-info
+                        .top-basket__item-name Рис с лососем, брокколи и томатами
+                        .top-basket__item-row
+                          .top-basket__item-price 1x
+                            span 165 UAH
+                          .top-basket__item-count.basket-count
+                            button(type="button").basket-count__btn.minus
+                              include ../img/ico/minus.svg
+                            input(type="text" value="1").basket-count__input
+                            button(type="button").basket-count__btn.plus
+                              include ../img/ico/plus.svg
+                      .top-basket__item-btn
+                        a(href="javascript:void(0);").top-basket__item-btn-delete
+                          include ../img/ico/del-ico.svg
+                  .top-basket__item.cart__order-item
+                    .top-basket__item-content
+                      .top-basket__item-img
+                        picture
+                          source(srcset="./img/top-basket-img.webp" type="image/webp")
+                          img(src="./img/top-basket-img.png" alt="img" width="64")
+                      .top-basket__item-info
+                        .top-basket__item-name Рис с лососем, брокколи и томатами
+                        .top-basket__item-row
+                          .top-basket__item-price 1x
+                            span 165 UAH
+                          .top-basket__item-count.basket-count
+                            button(type="button").basket-count__btn.minus
+                              include ../img/ico/minus.svg
+                            input(type="text" value="1").basket-count__input
+                            button(type="button").basket-count__btn.plus
+                              include ../img/ico/plus.svg
+                      .top-basket__item-btn
+                        a(href="javascript:void(0);").top-basket__item-btn-delete
+                          include ../img/ico/del-ico.svg
+                  .top-basket__item.cart__order-item
+                    .top-basket__item-content
+                      .top-basket__item-img
+                        picture
+                          source(srcset="./img/top-basket-img.webp" type="image/webp")
+                          img(src="./img/top-basket-img.png" alt="img" width="64")
+                      .top-basket__item-info
+                        .top-basket__item-name Рис с лососем, брокколи и томатами
+                        .top-basket__item-row
+                          .top-basket__item-price 1x
+                            span 165 UAH
+                          .top-basket__item-count.basket-count
+                            button(type="button").basket-count__btn.minus
+                              include ../img/ico/minus.svg
+                            input(type="text" value="1").basket-count__input
+                            button(type="button").basket-count__btn.plus
+                              include ../img/ico/plus.svg
+                      .top-basket__item-btn
+                        a(href="javascript:void(0);").top-basket__item-btn-delete
+                          include ../img/ico/del-ico.svg
               .cart__order-total
                 .cart__order-total-txt Всего:
                 .cart__order-total-price 565 UAH
-          .cart__personal
+          form.cart__personal#cartPersonal
             .cart__personal-tab
-              .cart__personal-tab-i.active
+              .cart__personal-tab-i.active(data-personal-tab="1")
                 span 1
                 | Номер телефона
-              .cart__personal-tab-i
+                include ../img/ico/arrow-right.svg
+              .cart__personal-tab-i(data-personal-tab="2")
                 span 2
                 | Код
-              .cart__personal-tab-i
+                include ../img/ico/arrow-right.svg
+              .cart__personal-tab-i(data-personal-tab="3")
                 span 3
                 | Доставка
-              .cart__personal-tabi
-                span 1
+                include ../img/ico/arrow-right.svg
+              .cart__personal-tab-i(data-personal-tab="4")
+                span 4
                 | Оплата
 
-            .cart__personal-step.active
+            .cart__personal-step.active(data-personal-step="1")
               .cart__personal-title Ваш номер телефона
               .cart__personal-txt Для оформлениия заказа ведите Ваш номер телефона.
-              .site-from__row
-                .site-from__input
-                  input(type="text")
-              .site-from__row
-                .site-from__btn
-                  button.site-btn.site-from__btn-i
+              .site-form__row
+                .site-form__input.site-form__input--phone
+                  input(type="tel" placeholder="+380 (__) ___-__-__").phonemask.required
+                  .error-message Проверьте правильность данных.
+              .site-form__row
+                .site-form__btn
+                  button.site-btn.site-form__btn-i.personal-step-btn-js
                     span Отправить
 
-            .cart__personal-step
-              .cart__personal-title Введите код подтверждения
-              .cart__personal-txt Код пришел на + 380 956 184 307
-              a(href="javascript:void(0)").cart__personal-back-link
+            .cart__personal-step(data-personal-step="2")
+              a(href="javascript:void(0)").cart__personal-back-link.back-link-js
                 include ../img/ico/back.svg
                 | Назад
-              .site-from__row
-                .site-from__input
-                  input(type="text" placeholder="1234")
-              .site-from__row
-                .site-from__btn
-                  button.site-btn.site-from__btn-i
+              .cart__personal-title Введите код подтверждения
+              .cart__personal-txt Код пришел на&nbsp;
+                span + 380 956 184 307
+              .site-form__row
+                .site-form__input
+                  input(type="text").required
+                  .error-message Проверьте правильность данных.
+              .site-form__row
+                .site-form__btn
+                  button.site-btn.site-form__btn-i.personal-step-btn-js
                     span Отправить
 
-              .cart__personal-question
-                span Не получили код?
+              .cart__personal-txt Не получили код?&nbsp;
                 a(href="#") Отправить еще раз.
 
 
-            .cart__personal-step
-              .cart__personal-title Дата и адрес доставки
-              a(href="javascript:void(0)").cart__personal-back-link
+            .cart__personal-step(data-personal-step="3").w400
+              a(href="javascript:void(0)").cart__personal-back-link.back-link-js
                 include ../img/ico/back.svg
                 | Назад
-              .site-from__row
-                .site-from__input
+              .cart__personal-title Дата и адрес доставки
+              .site-form__row
+                .site-form__input
                   label(for="personalName") Имя:
                   input(type="text" id="personalName")
-              .site-from__row
-                .site-from__input
+              .site-form__row
+                .site-form__input
                   label(for="personalCity") Город:
-                  input(type="text" id="personalCity" value="Харьков")
-              .site-from__row
-                .site-from__input.site-from__input--66
-                  label(for="personalStreet") Улица:
-                  input(type="text" id="personalStreet")
-                .site-from__input.site-from__input--33
-                  label(for="personalHouse") Дом:
-                  input(type="text" id="personalHouse")
-              .site-from__row
-                .site-from__input.site-from__input--33
-                  label(for="personalEntrance") Улица:
-                  input(type="text" id="personalEntrance" )
-                .site-from__input.site-from__input--33
-                  label(for="personalApartment") Дом:
-                  input(type="text" id="personalApartment" )
-              .site-from__hr
-              .site-from__row
-                .site-from__select.site-from__input--50
-                  label(for="cartDate") Дата доставки:
-                  select#cartDate
-                    option(value="22 Июня 2020" selected="selected") 22 Июня 2020
-                    option(value="23 Июня 2020") 23 Июня 2020
-                    option(value="24 Июня 2020") 24 Июня 2020
-                .site-from__select.site-from__input--50
-                  label(for="cartTime") Дата доставки:
-                  select#cartTime
-                    option(value="09:00 до 12:00" selected="selected") С 09:00 до 12:00
-                    option(value="12:00 до 15:00") С 12:00 до 15:00
-                    option(value="15:00 до 18:00") С 15:00 до 18:00
-                    option(value="18:00 до 21:00") С 18:00 до 21:00
-                    option(value="21:00 до 00:00") С 21:00 до 00:00
-              .site-from__hr
-              .site-from__row
-                .site-from__checkbox
+                  input(type="text" readonly id="personalCity" value="Харьков")
+              .site-form__row
+                .site-form__row-inner
+                  .site-form__input.site-form__input--66
+                    label(for="personalStreet") Улица:
+                    input(type="text" id="personalStreet")
+                  .site-form__input.site-form__input--33
+                    label(for="personalHouse") Дом:
+                    input(type="text" id="personalHouse")
+              .site-form__row
+                .site-form__row-inner
+                  .site-form__input.site-form__input--33
+                    label(for="personalEntrance") Улица:
+                    input(type="text" id="personalEntrance" )
+                  .site-form__input.site-form__input--33
+                    label(for="personalApartment") Дом:
+                    input(type="text" id="personalApartment" )
+              .site-form__hr
+              .site-form__row
+                .site-form__row-inner
+                  .site-form__select.site-form__input--50
+                    label(for="cartDate") Дата доставки:
+                    select#cartDate
+                      option(value="22 Июня 2020" selected="selected") 22 Июня 2020
+                      option(value="23 Июня 2020") 23 Июня 2020
+                      option(value="24 Июня 2020") 24 Июня 2020
+                  .site-form__select.site-form__input--50
+                    label(for="cartTime") Дата доставки:
+                    select#cartTime
+                      option(value="09:00 до 12:00" selected="selected") С 09:00 до 12:00
+                      option(value="12:00 до 15:00") С 12:00 до 15:00
+                      option(value="15:00 до 18:00") С 15:00 до 18:00
+                      option(value="18:00 до 21:00") С 18:00 до 21:00
+                      option(value="21:00 до 00:00") С 21:00 до 00:00
+              .site-form__hr
+              .site-form__row
+                .site-form__checkbox
                   input#callbackCheckbox(type="checkbox" checked="checked")
                   label(for="callbackCheckbox") Не перезванивайте мне, я уверен(а) в заказе.
-              .site-from__row
-                .site-from__btn
-                  button.site-btn.site-from__btn-i
+              .site-form__row
+                .site-form__btn
+                  button.site-btn.site-form__btn-i.personal-step-btn-js
                     span Продолжить
 
 
-            .cart__personal-step
+            .cart__personal-step(data-personal-step="4")
               .cart__personal-title Оплата
-              .site-from__row
-                .site-from__radio
+              a(href="javascript:void(0)").cart__personal-back-link.back-link-js
+                include ../img/ico/back.svg
+                | Назад
+              .site-form__row
+                .site-form__radio
                   input(type="radio" id="onlinePay" name="payment" checked="checked")
                   label(for="onlinePay") Онлайн-оплата
-              .site-from__row
-                .site-from__input.site-from__input--50
-                  label(for="NumberCard") Номер карты
-                  input(type="text" id="NumberCard" )
-                .site-from__select.site-from__input--50
-                  label(for="cartTime") Страна, регион
-                  select#country
-                    option(value="ua") Украина
-                    option(value="pl") Польша
-                    option(value="ru") Россия
               .site-form__row
-                .site-from__input.site-from__input--50
-                  label(for="nameCard") Имя на карте
-                  input(type="text" id="nameCard" )
-                .site-from__input.site-from__input--25
-                  label(for="mmyy") MM/YY
-                  input(type="text" id="mmyy" )
-                .site-from__input.site-from__input--25
-                  label(for="cwcvc") CVV / CVC
-                  input(type="password" id="cwcvc" )
+                .site-form__row-inner
+                  .site-form__input.site-form__input--50
+                    label(for="NumberCard") Номер карты
+                    input(type="text" id="NumberCard" placeholder="1234 **** **** ****" ).cardmask
+                  .site-form__select.site-form__input--50
+                    label(for="cartTime") Страна, регион
+                    select#country
+                      option(value="ua") Украина
+                      option(value="pl") Польша
+                      option(value="ru") Россия
               .site-form__row
-                .site-from__radio
+                .site-form__row-inner
+                  .site-form__input.site-form__input--50
+                    label(for="nameCard") Имя на карте
+                    input(type="text" id="nameCard" )
+                  .site-form__input.site-form__input--25
+                    label(for="mmyy") MM/YY
+                    input(type="text" id="mmyy" placeholder="__/__").mmmymask
+                  .site-form__input.site-form__input--25
+                    label(for="cwcvc") CVV / CVC
+                    input(type="password" id="cwcvc" )
+              .site-form__row
+                .site-form__radio
                   input(type="radio" id="cash" name="payment")
-                  label(for="cash") ОНаличными при получении
-                .site-from__radio
+                  label(for="cash") Наличными при получении
+              .site-form__row
+                .site-form__radio
                   input(type="radio" id="card" name="payment")
                   label(for="card") Картой при получении
-                .site-from__radio
+              .site-form__row
+                .site-form__radio
                   input(type="radio" id="LiqPay" name="payment")
                   label(for="LiqPay") LiqPay
 
-              .site-from__btn
-                button.site-btn.site-from__btn-i
+              .site-form__btn
+                button.site-btn.site-form__btn-i#sendForm
                   span Оформить заказ
 
 

@@ -1,0 +1,31 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Order page";
+  - var pageClass = "orderPage";
+  - var headerView = false;
+  - var pageActive = "orderPage";
+block content
+
+  div.main-wrap
+    .cart.order
+      .cart__inner.site-container
+        .cart__head.site-head
+          .cart__head-logo
+            .header__logo-l
+              include ../img/MKitchen.svg
+
+
+        .order__content
+          .order__inner
+            .order__check
+              include ../img/ico/check.svg
+            .order__title Ваш заказ оформлен
+            .order__number Номер заказа -
+              span 123456
+            .order__btn
+              a(href="./index1.html").order__btn-i.site-btn.site-btn--green
+                span На главную
+
+
+

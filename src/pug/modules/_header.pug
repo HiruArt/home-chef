@@ -13,7 +13,7 @@ header.header
 					.header__nav-item
 						a(href="./delivery-and-payment.html" class=(pageActive === "delivery" ? "header__nav-link active" : 'header__nav-link')) Доставка и оплата
 				.header__btn
-					a(href="#").site-btn.site-btn--transparent.header__btn-i
+					a(href="./trial-dish.html").site-btn.site-btn--transparent.header__btn-i
 						span Хочу пробное блюдо
 
 
@@ -21,7 +21,7 @@ header.header
 		.header__basket
 			.top-basket
 				.top-basket__inner.site-container
-					.top-basket__list-wrap
+					.top-basket__list-wrap.top-basket-scroll-js
 						.top-basket__list
 							.top-basket__item
 								.top-basket__item-content
@@ -107,7 +107,7 @@ header.header
 						.top-basket__info-price Сумма: <br>
 							span 565 UAH
 						.top-basket__info-btn
-							a(href="#").top-basket__info-btn-i.site-btn.site-btn--yellow.site-btn--yellow-light
+							a(href="#" data-modal-class="order-detail").top-basket__info-btn-i.site-btn.site-btn--yellow.site-btn--yellow-light
 								span Посмотреть заказ
 							a(href="./cart.html").top-basket__info-btn-i.site-btn.site-btn--yellow
 								span Оформить заказ

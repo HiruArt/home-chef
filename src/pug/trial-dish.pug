@@ -1,0 +1,54 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Trial dish page";
+  - var pageClass = "trialDishPage";
+  - var headerView = false;
+  - var pageActive = "trialDishPage";
+block content
+
+  div.main-wrap
+    .cart.tdish
+      .cart__inner.site-container
+        .cart__head.site-head
+          .cart__head-logo
+            .header__logo-l
+              include ../img/MKitchen.svg
+          .cart__head-btn
+            a(href="./index1.html").cart__head-btn-i.site-btn.site-btn--transparent
+              span Обратно на сайт
+
+        .tdish__inner
+          .tdish__title.site-title Пробное блюдо
+          .tdish__list
+            .menu__item
+              .menu__item-content
+                .menu__item-portions 2<br> Порции
+                a(href="./card.html" data-modal-class="dish-detail").menu__item-img
+                  picture
+                    source(srcset="./img/menu-img-1.webp" type="image/webp")
+                    img(src="./img/menu-img-1.png" alt="img" width="250")
+                .menu__item-info
+                  .menu__item-category
+                    a(href="javascript:void(0);").menu__item-category-i.blue Основные блюда
+                  a(href="./card.html" data-modal-class="dish-detail").menu__item-name Рис с лососем, брокколи и томатами
+                  .menu__item-desc 122 кКал, БЖУ: 5.0 / 4.0 / 21.0 <br>(на 100 г блюда)
+            .menu__item.tdish__item
+              .menu__item-portions 2<br> Порции
+              .menu__item-content
+                a(href="#").menu__item-img
+                  picture
+                    source(srcset="./img/menu-img-2.webp" type="image/webp")
+                    img(src="./img/menu-img-2.png" alt="img" width="250")
+                .menu__item-info
+                  .menu__item-category
+                    a(href="javascript:void(0);").menu__item-category-i.green Салаты
+                  a(href="#").menu__item-name Салат с томатами,огурцами, авокадо и фетой
+                  .menu__item-desc 122 кКал, БЖУ: 5.0 / 4.0 / 21.0 <br> (на 100 г блюда)
+
+          .tdish__btn
+            a(href="./cart.html").tdish__btn-i.site-btn.site-btn--yellow
+              span Заказать (230 UAH)
+
+
+

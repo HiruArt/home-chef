@@ -18,14 +18,17 @@ html(lang="ru")
 		link(rel='stylesheet', href='css/libs.min.css')
 		link(rel='stylesheet', href='css/style.min.css')
 
+		link(rel="preload" href="./fonts/FuturaBookC.woff2" as="font" type="font/woff2" crossorigin)
+		link(rel="preload" href="./fonts/FuturaMediumC.woff2" as="font" type="font/woff2" crossorigin)
+
 
 
 	body(class="page " + pageClass)
 		.page__wrapper
-			if (pageClass !== "cartPage")
+			if (headerView !== false)
 				include modules/_header
 
-			main.page__content(class="page__content " )
+			main.page__content
 				block content
 
 			include modules/_footer
