@@ -168,6 +168,10 @@ input{
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+
+  @include from-1600{
+    max-width: 1600px;
+  }
 }
 
 .site-title{
@@ -190,6 +194,11 @@ input{
     line-height: 44px;
   }
 
+  @include for-550{
+    font-size: 24px;
+    line-height: 40px;
+  }
+
   span{
     font-family: FuturaMediumC, sans-serif;
     font-style: normal;
@@ -199,10 +208,29 @@ input{
     display: flex;
     align-items: center;
     color: $green;
+
+    @include for-992{
+      margin-bottom: 10px;
+    }
   }
 
   &--big{
     font-size: 66px;
+
+    @include for-992{
+      font-size: 34px;
+      line-height: 44px;
+
+      br{
+        display: none;
+      }
+    }
+
+    @include for-550{
+      font-size: 30px;
+      line-height: 28px;
+      max-width: 294px;
+    }
   }
 }
 
@@ -213,6 +241,16 @@ input{
   color: $greenblack;
   margin-top: 20px;
   margin-bottom: 45px;
+
+  @include for-550{
+    max-width: 278px;
+    margin-left: auto;
+    margin-right: auto;
+
+    br{
+      display: none;
+    }
+  }
 }
 
 .site-btn{
@@ -330,7 +368,7 @@ input{
 .site-head{
 
   @include for-992{
-    display: none;
+    display: none !important;
   }
 }
 
@@ -595,6 +633,7 @@ input{
   min-height: calc(100vh - 176px);
 
   @include for-992 {
+    margin-top: 50px;
     min-height: calc(100vh - 156px);
   }
 }
@@ -717,6 +756,15 @@ input{
     display: flex;
     height: 100%;
     align-items: center;
+
+    @include for-992{
+
+      justify-content: flex-start;
+
+      svg{
+        height: 18px;
+      }
+    }
   }
 
   &__content{
@@ -737,6 +785,12 @@ input{
     }
   }
 
+  @include for-992{
+    &.menu-open &__content{
+      left: 0;
+    }
+  }
+
   &__nav{
     display: flex;
     margin: 0 -13px;
@@ -753,6 +807,7 @@ input{
     @include for-992{
       display: flex;
       justify-content: center;
+      margin-bottom: 15px;
     }
   }
 
@@ -805,8 +860,37 @@ input{
     margin-left: 20px;
 
     @include for-992{
-      margin-right: 46px;
+      margin-right: 0;
       margin-left: 0;
+    }
+  }
+
+  &__btn--mobile{
+
+    @include for-992{
+      margin-right: 30px;
+      margin-left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__btn-i--mobile{
+
+    @include for-992{
+      height: 40px;
+      min-height: 40px;
+      max-width: 138px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      span{
+        font-size: 12px;
+        line-height: 14px;
+        padding: 0;
+      }
     }
   }
 
@@ -820,14 +904,46 @@ input{
 
   &__nav-btn{
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 20px;
+    top: 20px;
+    z-index: 20;
+
+    @include from-992{
+      display: none;
+    }
   }
 
   &__nav-btn-i{
+    position: relative;
+    display: flex;
 
+    &:after{
+      content: '';
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    svg:first-child{
+      display: block;
+    }
+    svg:last-child{
+      display: none;
+    }
   }
+
+  &.menu-open &__nav-btn-i{
+
+    svg:first-child{
+      display: none;
+    }
+    svg:last-child{
+      display: block;
+    }
+  }
+
 
 }
 .trialDishPage .header,
@@ -1001,9 +1117,14 @@ input{
   padding: 40px 0;
   margin: 0;
 
+  @include for-992{
+    padding: 30px 0 18px 0;
+  }
+
   &__inner{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__i{
@@ -1040,6 +1161,10 @@ input{
 .top-block{
   padding-top: 35px;
 
+  @include for-550{
+    padding-top: 10px;
+  }
+
   &__inner{
 
   }
@@ -1056,14 +1181,12 @@ input{
 
 
     @include for-1100{
-      height: 400px;
+      height: 405px;
     }
   }
 
   &__img-i{
-    @include for-1400{
-      width: 100%;
-    }
+    width: 100%;
 
     @include for-1100{
       height: 100%;
@@ -1082,6 +1205,7 @@ input{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 0 15px;
   }
 
   &__title{
@@ -1098,6 +1222,12 @@ input{
       font-size: 40px;
       line-height: 46px;
     }
+
+    @include for-550{
+      font-size: 30px;
+      line-height: 28px;
+      margin-bottom: 10px;
+    }
   }
 
   &__txt{
@@ -1113,11 +1243,25 @@ input{
       line-height: 24px;
       font-size: 16px;
     }
+
+    @include for-550{
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 15px;
+
+      br{
+        display: none;
+      }
+    }
   }
 
   &__btn{
     display: flex;
     justify-content: center;
+
+    @include for-550{
+      flex-direction: column;
+    }
   }
 
   &__btn-i{
@@ -1125,7 +1269,15 @@ input{
     min-height: 62px;
 
     @include for-1300{
-      min-height: 50px;
+      min-height: 58px;
+    }
+
+    @include for-550{
+      margin-bottom: 10px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
 
     span{
@@ -1142,6 +1294,11 @@ input{
   padding-top: 80px;
   padding-bottom: 65px;
 
+  @include for-992{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   &__inner{
 
   }
@@ -1152,9 +1309,10 @@ input{
 
   &__list{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin: 0 -20px;
     margin-top: 25px;
+    flex-wrap: wrap;
   }
 
   &__item{
@@ -1164,6 +1322,14 @@ input{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include for-992 {
+      margin-bottom: 15px;
+    }
+
+    @include for-550{
+      max-width: 100%;
+    }
 
     &--1 {
       .hiw__item-img {
@@ -1299,6 +1465,14 @@ input{
 
   &__body-title{
     margin: 0 50px;
+
+    @include for-992{
+      margin: 0 30px;
+    }
+
+    @include for-550{
+      margin: 0 15px;
+    }
   }
 
   &__body-tab{
@@ -1308,6 +1482,12 @@ input{
     margin-right: auto;
     width: fit-content;
     display: flex;
+
+    @include for-768{
+      max-width: 176px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
   }
 
   &__body-tab-i{
@@ -1322,6 +1502,12 @@ input{
     display: block;
     height: 42px;
     transition: .3s;
+
+    @include for-768{
+      font-size: 14px;
+      line-height: 22px;
+      height: 31px;
+    }
 
     &:hover{
       color: $yellow;
@@ -1374,6 +1560,10 @@ input{
     @include for-992{
       width: 50%;
     }
+
+    @include for-550{
+      width: 100%;
+    }
   }
 
   &__item-content{
@@ -1400,6 +1590,11 @@ input{
       width: 250px;
       height: 250px;
       object-fit: contain;
+
+      @include for-768{
+        width: 200px;
+        height: 200px;
+      }
     }
   }
 
@@ -1671,8 +1866,8 @@ input{
   position: relative;
 
   @include for-992{
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   &:before{
@@ -1700,6 +1895,10 @@ input{
 
   &__desc{
 
+    @include for-992{
+      margin-bottom: 25px;
+    }
+
   }
 
   &__img{
@@ -1709,9 +1908,18 @@ input{
 
     border-radius: 20px;
     overflow: hidden;
+    width: 100%;
+
+    picture{
+      width: 100%;
+    }
 
     @include for-992{
       margin-bottom: 20px;
+    }
+
+    @include for-550{
+      height: 180px;
     }
 
     img{
@@ -1722,36 +1930,37 @@ input{
   &__list-wrap{
     display: flex;
     justify-content: center;
+
+    @include for-992{
+      overflow: scroll;
+      position: relative;
+    }
   }
 
   &__list{
     max-width: 1000px;
     width: 100%;
+
+    @include for-992{
+      flex-wrap: nowrap;
+    }
   }
 
   &__item{
     width: 25%;
 
     @include for-992{
-      width: 50%;
+      width: max-content;
     }
   }
 
   &__item-content{
-    @include for-992{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 20px;
-    }
+
   }
 
   &__item-ico{
     margin-bottom: 25px;
 
-    @include for-992{
-      margin-bottom: 10px;
-    }
   }
 
   &__item-name{
@@ -1764,8 +1973,9 @@ input{
     margin-bottom: 10px;
 
     @include for-992{
-      text-align: center;
+      white-space: nowrap;
     }
+
   }
 
   &__item-desc{
@@ -1774,9 +1984,6 @@ input{
     color: #272F27;
     opacity: 0.6;
 
-    @include for-992{
-      text-align: center;
-    }
   }
 
 }
@@ -1807,15 +2014,26 @@ input{
     position: relative;
     display: flex;
     justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
 
+
+    picture{
+      width: 100%;
+    }
 
     img{
       width: 100%;
 
       @include for-992{
         object-fit: cover;
-        height: 430px;
+        height: 446px;
         object-position: calc(-200px);
+      }
+
+      @include for-550{
+        object-fit: cover;
+        object-position: center;
       }
     }
   }
@@ -1832,7 +2050,12 @@ input{
     justify-content: center;
 
     @include for-1100{
-      padding-left: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @include for-550{
+      justify-content: flex-end;
     }
   }
 
@@ -1847,6 +2070,11 @@ input{
     align-items: center;
     color: #242E24;
 
+    @include for-768{
+      font-size: 24px;
+      line-height: 26px;
+      margin-bottom: 10px;
+    }
   }
 
   &__img-txt{
@@ -1854,6 +2082,16 @@ input{
     line-height: 26px;
     color: #272F27;
     max-width: 420px;
+
+    @include for-768{
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @include for-550{
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
   }
 
 }
@@ -1893,6 +2131,11 @@ input{
     text-align: center;
     color: #65B458;
     margin-bottom: 10px;
+
+    @include for-550{
+      font-size: 28px;
+      line-height: 46px;
+    }
   }
 
   &__desc{
@@ -1916,6 +2159,10 @@ input{
 
   &__inner{
     max-width: 1000px;
+
+    @include for-550{
+      padding: 0 10px;
+    }
   }
 
   &__list{
@@ -1924,7 +2171,7 @@ input{
     margin: 0 -20px;
 
     @include for-992{
-      margin: 0 -15px;
+      margin: 0 -10px;
       flex-direction: column;
     }
   }
@@ -1934,9 +2181,8 @@ input{
     padding: 0 20px;
 
     @include for-992{
-      padding: 0 15px;
+      padding: 0 10px;
       width: 100%;
-      margin-bottom: 15px;
     }
   }
 
@@ -1954,6 +2200,10 @@ input{
   }
   &__item--question  &__item-content{
     background: #F8F9F8;
+
+    @include for-550{
+      background: white;
+    }
   }
 
   &__img{
@@ -2078,11 +2328,28 @@ input{
     justify-content: space-between;
     max-width: 780px;
     width: 100%;
+
+    @include for-992{
+      flex-direction: column;
+    }
   }
 
   &__img{
     width: 300px;
     height: 300px;
+
+    @include for-992{
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+
+      img{
+        width: 200px;
+        height: 200px;
+
+      }
+    }
   }
 
   &__info{
@@ -2100,6 +2367,10 @@ input{
     justify-content: flex-start;
     margin-bottom: 20px;
 
+    @include for-992{
+      justify-content: center;
+    }
+
     a.menu__item-category-i {
       margin: 0;
       margin-right: 10px;
@@ -2114,6 +2385,10 @@ input{
     font-size: 38px;
     margin-bottom: 20px;
     color: #242E24;
+
+    @include for-992{
+      text-align: center;
+    }
   }
 
   &__row-info{
@@ -2122,6 +2397,10 @@ input{
     padding-bottom: 24px;
     border-bottom: 1px solid #EFEFEF;
     margin-bottom: 20px;
+
+    @include for-992{
+      justify-content: center;
+    }
 
     span{
       padding: 0 6px;
@@ -2145,10 +2424,18 @@ input{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+
+    @include for-992{
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
   }
 
   &__bottom-col{
 
+    @include for-992{
+      margin-bottom: 20px;
+    }
   }
 
   &__price{
@@ -2159,6 +2446,10 @@ input{
     line-height: 21px;
     color: #232E23;
     margin-bottom: 5px;
+
+    @include for-992{
+      text-align: center;
+    }
   }
 
   &__price-desc{
@@ -2168,6 +2459,10 @@ input{
     font-size: 14px;
     line-height: 18px;
     color: #B3B3B3;
+
+    @include for-992{
+      text-align: center;
+    }
 
     span{
       color: #505050;
@@ -2201,6 +2496,11 @@ input{
     justify-content: space-around;
     margin: 0 -13px;
     height: 70px;
+
+    @include for-992{
+      justify-content: center;
+      padding: 0 10px;
+    }
   }
 
   &__tab-link{
@@ -2221,6 +2521,13 @@ input{
     position: relative;
     transition: .3s;
 
+    @include for-992{
+      text-align: center;
+      padding: 0;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
     &:after{
       content: '';
       position: absolute;
@@ -2239,12 +2546,12 @@ input{
       color: $black;
     }
 
-    @include from-992{
-      &:hover:after,
-      &.active:after {
-        opacity: 1;
-      }
+
+    &:hover:after,
+    &.active:after {
+      opacity: 1;
     }
+
   }
 
   &__tab-list{
@@ -2846,10 +3153,21 @@ input{
     justify-content: space-between;
     align-items: center;
     min-height: 46px;
+    flex-wrap: wrap;
   }
 
   &__sotial{
     width: 33.3333%;
+
+    @include for-768{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      order: 2;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #EAEAEA;
+      margin-bottom: 20px;
+    }
   }
 
   &__sotial-i{
@@ -2883,12 +3201,24 @@ input{
     font-size: 16px;
     line-height: 22px;
     color: #A7A5A3;
+
+    @include for-768{
+      width: 100%;
+      order: 3;
+    }
   }
 
   &__phone{
     width: 33.3333%;
     display: flex;
     justify-content: flex-end;
+
+    @include for-768{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
   }
 
   &__phone-i{

@@ -131,10 +131,6 @@ $(document).ready(function () {
       // $('.active[data-tab-card-content]').slideToggle();
       $('.active[data-tab-card-content]').removeClass('active');
       $('[data-tab-card-content="'+ tab + '"]').addClass('active');
-      // setTimeout(function () {
-      //   $('[data-tab-card-content="'+ tab + '"]').slideToggle();
-      //   $('[data-tab-card-content="'+ tab + '"]').addClass('active');
-      // },300);
     })
   }
 
