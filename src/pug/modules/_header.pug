@@ -4,6 +4,13 @@ header.header
 			.header__logo
 				a(href="./").header__logo-l
 					include ../../img/MKitchen.svg
+			.header__btn.header__btn--mobile.tablet
+				a(href="./trial-dish.html").site-btn.site-btn--transparent.header__btn-i
+					span Хочу пробное блюдо
+			.header__nav-btn
+				a(href="javascript:void(0)").header__nav-btn-i
+					include ../../img/ico/burger-menu.svg
+					include ../../img/ico/close.svg
 			.header__content
 				.header__nav
 					.header__nav-item
@@ -17,7 +24,7 @@ header.header
 						span Хочу пробное блюдо
 
 
-	if (pageActive === "topBasket")
+	if (topBasket === true)
 		.header__basket
 			.top-basket
 				.top-basket__inner.site-container
