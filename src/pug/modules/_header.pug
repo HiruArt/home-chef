@@ -1,124 +1,128 @@
 header.header
-	.header__inner.site-container
-		.header__top
-			.header__logo
-				a(href="./").header__logo-l
-					include ../../img/MKitchen.svg
-			.header__btn.header__btn--mobile.tablet
-				a(href="./trial-dish.html").site-btn.site-btn--transparent.header__btn-i--mobile
-					span Хочу пробное блюдо
-			.header__nav-btn
-				a(href="javascript:void(0)").header__nav-btn-i#menu-btn
-					include ../../img/ico/burger-menu.svg
-					include ../../img/ico/close.svg
-			.header__content
-				.header__nav
-					.header__nav-item
-						a(href="./index1.html" class=(pageActive === "homepage" ? "header__nav-link active" : 'header__nav-link') ) Главная
-					.header__nav-item
-						a(href="./our-menu.html" class=(pageActive === "our-menu" ? "header__nav-link active" : 'header__nav-link')) Наше меню
-					.header__nav-item
-						a(href="./delivery-and-payment.html" class=(pageActive === "delivery" ? "header__nav-link active" : 'header__nav-link')) Доставка и оплата
-				.header__btn
-					a(href="./trial-dish.html").site-btn.site-btn--transparent.header__btn-i
-						span Хочу пробное блюдо
+  .header__inner.site-container
+    .header__top
+      .header__logo
+        a(href="./").header__logo-l
+          include ../../img/MKitchen.svg
+      .header__btn.header__btn--mobile.tablet
+        a(href="./trial-dish.html").site-btn.site-btn--transparent.header__btn-i--mobile
+          span Хочу пробное блюдо
+      .header__nav-btn
+        a(href="javascript:void(0)").header__nav-btn-i#menu-btn
+          include ../../img/ico/burger-menu.svg
+          include ../../img/ico/close.svg
+      .header__content
+        .header__nav
+          .header__nav-item
+            a(href="./index1.html" class=(pageActive === "homepage" ? "header__nav-link active" : 'header__nav-link') ) Главная
+          .header__nav-item
+            a(href="./our-menu.html" class=(pageActive === "our-menu" ? "header__nav-link active" : 'header__nav-link')) Наше меню
+          .header__nav-item
+            a(href="./delivery-and-payment.html" class=(pageActive === "delivery" ? "header__nav-link active" : 'header__nav-link')) Доставка и оплата
+        .header__btn
+          a(href="./trial-dish.html").site-btn.site-btn--transparent.header__btn-i
+            span Хочу пробное блюдо
 
 
-	if (topBasket === true)
-		.header__basket
-			.top-basket
-				.top-basket__inner.site-container
-					.top-basket__list-wrap.top-basket-scroll-js
-						.top-basket__list
-							.top-basket__item
-								.top-basket__item-content
-									.top-basket__item-img
-										picture
-											source(srcset="./img/top-basket-img.webp" type="image/webp")
-											img(src="./img/top-basket-img.png" alt="img" width="64")
-									.top-basket__item-info
-										.top-basket__item-name Рис с лососем, брокколи и томатами
-										.top-basket__item-row
-											.top-basket__item-price 1x
-												span 165 UAH
-											.top-basket__item-count.basket-count
-												button(type="button").basket-count__btn.minus
-													include ../../img/ico/minus.svg
-												input(type="text" value="1").basket-count__input
-												button(type="button").basket-count__btn.plus
-													include ../../img/ico/plus.svg
-									.top-basket__item-btn
-										a(href="javascript:void(0);").top-basket__item-btn-delete
-											include ../../img/ico/del-ico.svg
-							.top-basket__item
-								.top-basket__item-content
-									.top-basket__item-img
-										picture
-											source(srcset="./img/top-basket-img.webp" type="image/webp")
-											img(src="./img/top-basket-img.png" alt="img" width="64")
-									.top-basket__item-info
-										.top-basket__item-name Рис с лососем, брокколи и томатами
-										.top-basket__item-row
-											.top-basket__item-price 1x
-												span 165 UAH
-											.top-basket__item-count.basket-count
-												button(type="button").basket-count__btn.minus
-													include ../../img/ico/minus.svg
-												input(type="text" value="1").basket-count__input
-												button(type="button").basket-count__btn.plus
-													include ../../img/ico/plus.svg
-									.top-basket__item-btn
-										a(href="javascript:void(0);").top-basket__item-btn-delete
-											include ../../img/ico/del-ico.svg
-							.top-basket__item
-								.top-basket__item-content
-									.top-basket__item-img
-										picture
-											source(srcset="./img/top-basket-img.webp" type="image/webp")
-											img(src="./img/top-basket-img.png" alt="img" width="64")
-									.top-basket__item-info
-										.top-basket__item-name Рис с лососем, брокколи и томатами
-										.top-basket__item-row
-											.top-basket__item-price 1x
-												span 165 UAH
-											.top-basket__item-count.basket-count
-												button(type="button").basket-count__btn.minus
-													include ../../img/ico/minus.svg
-												input(type="text" value="1").basket-count__input
-												button(type="button").basket-count__btn.plus
-													include ../../img/ico/plus.svg
-									.top-basket__item-btn
-										a(href="javascript:void(0);").top-basket__item-btn-delete
-											include ../../img/ico/del-ico.svg
-							.top-basket__item
-								.top-basket__item-content
-									.top-basket__item-img
-										picture
-											source(srcset="./img/top-basket-img.webp" type="image/webp")
-											img(src="./img/top-basket-img.png" alt="img" width="64")
-									.top-basket__item-info
-										.top-basket__item-name Рис с лососем, брокколи и томатами
-										.top-basket__item-row
-											.top-basket__item-price 1x
-												span 165 UAH
-											.top-basket__item-count.basket-count
-												button(type="button").basket-count__btn.minus
-													include ../../img/ico/minus.svg
-												input(type="text" value="1").basket-count__input
-												button(type="button").basket-count__btn.plus
-													include ../../img/ico/plus.svg
-									.top-basket__item-btn
-										a(href="javascript:void(0);").top-basket__item-btn-delete
-											include ../../img/ico/del-ico.svg
-					.top-basket__info
-						.top-basket__info-price Сумма: <br>
-							span 565 UAH
-						.top-basket__info-btn
-							a(href="#" data-modal-class="order-detail").top-basket__info-btn-i.site-btn.site-btn--yellow.site-btn--yellow-light
-								span Посмотреть заказ
-							a(href="./cart.html").top-basket__info-btn-i.site-btn.site-btn--yellow
-								span Оформить заказ
+  if (topBasket === true)
+    .header__basket
+      .top-basket
+        .top-basket__inner.site-container
+          .top-basket__list-wrap.top-basket-scroll-js
+            .top-basket__list
+              .top-basket__item
+                .top-basket__item-content
+                  .top-basket__item-img
+                    picture
+                      source(srcset="./img/top-basket-img.webp" type="image/webp")
+                      img(src="./img/top-basket-img.png" alt="img" width="64")
+                  .top-basket__item-info
+                    .top-basket__item-name Рис с лососем, брокколи и томатами
+                    .top-basket__item-row
+                      .top-basket__item-price 1x
+                        span 165 UAH
+                      .top-basket__item-count.basket-count
+                        button(type="button").basket-count__btn.minus
+                          include ../../img/ico/minus.svg
+                        input(type="text" value="1").basket-count__input
+                        button(type="button").basket-count__btn.plus
+                          include ../../img/ico/plus.svg
+                  .top-basket__item-btn
+                    a(href="javascript:void(0);").top-basket__item-btn-delete
+                      include ../../img/ico/del-ico.svg
+              .top-basket__item
+                .top-basket__item-content
+                  .top-basket__item-img
+                    picture
+                      source(srcset="./img/top-basket-img.webp" type="image/webp")
+                      img(src="./img/top-basket-img.png" alt="img" width="64")
+                  .top-basket__item-info
+                    .top-basket__item-name Рис с лососем, брокколи и томатами
+                    .top-basket__item-row
+                      .top-basket__item-price 1x
+                        span 165 UAH
+                      .top-basket__item-count.basket-count
+                        button(type="button").basket-count__btn.minus
+                          include ../../img/ico/minus.svg
+                        input(type="text" value="1").basket-count__input
+                        button(type="button").basket-count__btn.plus
+                          include ../../img/ico/plus.svg
+                  .top-basket__item-btn
+                    a(href="javascript:void(0);").top-basket__item-btn-delete
+                      include ../../img/ico/del-ico.svg
+              .top-basket__item
+                .top-basket__item-content
+                  .top-basket__item-img
+                    picture
+                      source(srcset="./img/top-basket-img.webp" type="image/webp")
+                      img(src="./img/top-basket-img.png" alt="img" width="64")
+                  .top-basket__item-info
+                    .top-basket__item-name Рис с лососем, брокколи и томатами
+                    .top-basket__item-row
+                      .top-basket__item-price 1x
+                        span 165 UAH
+                      .top-basket__item-count.basket-count
+                        button(type="button").basket-count__btn.minus
+                          include ../../img/ico/minus.svg
+                        input(type="text" value="1").basket-count__input
+                        button(type="button").basket-count__btn.plus
+                          include ../../img/ico/plus.svg
+                  .top-basket__item-btn
+                    a(href="javascript:void(0);").top-basket__item-btn-delete
+                      include ../../img/ico/del-ico.svg
+              .top-basket__item
+                .top-basket__item-content
+                  .top-basket__item-img
+                    picture
+                      source(srcset="./img/top-basket-img.webp" type="image/webp")
+                      img(src="./img/top-basket-img.png" alt="img" width="64")
+                  .top-basket__item-info
+                    .top-basket__item-name Рис с лососем, брокколи и томатами
+                    .top-basket__item-row
+                      .top-basket__item-price 1x
+                        span 165 UAH
+                      .top-basket__item-count.basket-count
+                        button(type="button").basket-count__btn.minus
+                          include ../../img/ico/minus.svg
+                        input(type="text" value="1").basket-count__input
+                        button(type="button").basket-count__btn.plus
+                          include ../../img/ico/plus.svg
+                  .top-basket__item-btn
+                    a(href="javascript:void(0);").top-basket__item-btn-delete
+                      include ../../img/ico/del-ico.svg
+          .top-basket__info
+            .top-basket__info-price.tablet Заказ на сумму: <br>
+              span 565 UAH
+            .top-basket__info-price.desktop Сумма: <br>
+              span 565 UAH
+            .top-basket__info-btn.top-basket__info-btn--mobile.mobile
+              a(href="#" data-modal-class="order-detail").top-basket__info-btn-i Редактировать
+            .top-basket__info-btn.mobile-hide
+              a(href="#" data-modal-class="order-detail").top-basket__info-btn-i.site-btn.site-btn--yellow.site-btn--yellow-light
+                span Посмотреть заказ
+              a(href="./cart.html").top-basket__info-btn-i.site-btn.site-btn--yellow
+                span Оформить заказ
 
-	else
-		.header__basket.header__basket--empty
+  else
+    .header__basket.header__basket--empty
 
