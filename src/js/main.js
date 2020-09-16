@@ -224,7 +224,12 @@ $(document).ready(function () {
       $(this).closest('[data-personal-step]').next().addClass('active');
 
       var ofsetPersonalCart = $('#cartPersonal').offset().top;
-      jQuery('html,body').animate({scrollTop: ofsetPersonalCart - 50},300);
+
+      if($(window).width() > 992) {
+        jQuery('html,body').animate({scrollTop: ofsetPersonalCart - 50}, 300);
+      } else {
+        jQuery('html,body').animate({scrollTop: ofsetPersonalCart - 150 }, 300);
+      }
 
       $('[data-personal-tab]').each(function () {
         if($(this).data('personal-tab') == tabActuel){
@@ -247,7 +252,12 @@ $(document).ready(function () {
     $(this).closest('[data-personal-step]').prev().addClass('active');
 
     var ofsetPersonalCart = $('#cartPersonal').offset().top;
-    jQuery('html,body').animate({scrollTop: ofsetPersonalCart - 50},300);
+
+    if($(window).width() > 992) {
+      jQuery('html,body').animate({scrollTop: ofsetPersonalCart - 50}, 300);
+    } else {
+      jQuery('html,body').animate({scrollTop: ofsetPersonalCart - 150 }, 300);
+    }
 
     $('[data-personal-tab]').each(function () {
       if($(this).data('personal-tab') == tabActuel){

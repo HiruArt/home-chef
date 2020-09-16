@@ -10,12 +10,12 @@ block content
       .top-block__inner.site-container
         .top-block__item
           .top-block__img
-            picture
-              source(media="(min-width: 551px)" srcset="./img/top-bunner.png" type="image/png")
-              source(media="(max-width: 550px)" srcset="./img/top-block-mobile.png" type="image/png")
-              source(media="(min-width: 551px)" srcset="./img/top-bunner.webp" type="image/webp")
-              source(media="(max-width: 550px)" srcset="./img/top-block-mobile.webp" type="image/webp")
+            picture.from-px550
+              source(srcset="./img/top-bunner.webp" type="image/webp" )
               img(src="./img/top-bunner.png" alt="img").top-block__img-i
+            picture.for-px550
+              source(srcset="./img/top-block-mobile.webp" type="image/webp")
+              img(src="top-block-mobile.png" alt="img").top-block__img-i
 
           .top-block__item-body
             .top-block__title Лучшее питание <br> с доставкой на дом

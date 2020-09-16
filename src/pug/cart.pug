@@ -147,6 +147,9 @@ block content
                 | Оплата
 
             .cart__personal-step.active(data-personal-step="1")
+              .cart__personal-tab-mobile
+                span 1
+                | Номер телефона
               .cart__personal-title Ваш номер телефона
               .cart__personal-txt Для оформлениия заказа ведите Ваш номер телефона.
               .site-form__row
@@ -162,6 +165,9 @@ block content
               a(href="javascript:void(0)").cart__personal-back-link.back-link-js
                 include ../img/ico/back.svg
                 | Назад
+              .cart__personal-tab-mobile
+                span 2
+                | Код
               .cart__personal-title Введите код подтверждения
               .cart__personal-txt Код пришел на&nbsp;
                 span + 380 956 184 307
@@ -182,6 +188,9 @@ block content
               a(href="javascript:void(0)").cart__personal-back-link.back-link-js
                 include ../img/ico/back.svg
                 | Назад
+              .cart__personal-tab-mobile
+                span 3
+                | Доставка
               .cart__personal-title Дата и адрес доставки
               .site-form__row
                 .site-form__input
@@ -240,6 +249,9 @@ block content
               a(href="javascript:void(0)").cart__personal-back-link.back-link-js
                 include ../img/ico/back.svg
                 | Назад
+              .cart__personal-tab-mobile
+                span 4
+                | Оплата
               .site-form__row
                 .site-form__radio
                   input(type="radio" id="onlinePay" name="payment" checked="checked")

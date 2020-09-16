@@ -128,6 +128,18 @@ a{
   }
 }
 
+.from-px550{
+  @include for-550{
+    display: none;
+  }
+}
+
+.for-px550{
+  @include from-550{
+    display: none;
+  }
+}
+
 input{
   transition: 0.3s;
 }
@@ -401,12 +413,19 @@ input{
   &__row{
     display: flex;
     margin-bottom: 15px;
+
+    @include for-550{
+      justify-content: center;
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   &__row-inner{
     display: flex;
     margin: 0 -5px;
     width: 100%;
+    flex-wrap: wrap;
 
     & > div{
       padding: 0 5px;
@@ -418,9 +437,24 @@ input{
     max-width: 325px;
     position: relative;
 
+    @include for-550{
+      max-width: 100%;
+    }
+
+
+    &--66{
+      @include for-550{
+        width: 66% !important;
+      }
+    }
 
     &--50{
       width: 50% !important;
+
+      @include for-550{
+        width: 100% !important;
+        margin-bottom: 12px;
+      }
     }
 
     &--38{
@@ -433,6 +467,10 @@ input{
 
     &--25{
       width: 25% !important;
+
+      @include for-550{
+        width: 50% !important;
+      }
     }
 
     &--20{
@@ -465,6 +503,10 @@ input{
       line-height: 22px;
       color: #272F27;
       padding-left: 25px;
+
+      @include for-550{
+
+      }
     }
 
     input{
@@ -478,6 +520,11 @@ input{
       font-size: 14px;
       line-height: 22px;
       color: #2B2727;
+
+      @include for-550{
+        height: 50px;
+        font-size: 16px;
+      }
 
 
       &:read-only{
@@ -517,6 +564,10 @@ input{
       line-height: 22px;
       color: #2B2727;
       outline: none;
+
+      @include for-550{
+        height: 50px;
+      }
     }
 
     .ui-button .ui-icon{
@@ -536,6 +587,10 @@ input{
 
 
   &__checkbox{
+
+    @include for-550{
+      width: 100%;
+    }
 
     label{
       font-size: 14px;
@@ -579,6 +634,10 @@ input{
   }
 
   &__radio{
+
+    @include for-550{
+      width: 100%;
+    }
 
     label{
       font-size: 15px;
@@ -636,6 +695,21 @@ input{
     margin: 20px 0;
   }
 
+  @include for-550{
+    .site-btn{
+      min-height: 50px;
+    }
+  }
+
+  &__btn{
+
+    @include for-550{
+      margin-top: 10px;
+      justify-content: center;
+      display: flex;
+      width: 100%;
+    }
+  }
 
 }
 
@@ -1110,6 +1184,20 @@ input{
     font-size: 14px;
     line-height: 16px;
     color: #94969A;
+     @include for-992{
+       position: relative;
+       padding-left: 44px;
+
+       &:before{
+         content: '';
+         width: 32px;
+         height: 32px;
+         background: url("../img/ico/bask-ico.svg") center/contain no-repeat;
+         position: absolute;
+         left: 0;
+         top: 3px;
+       }
+     }
 
     span{
       font-family: FuturaMediumC,sans-serif;
@@ -2332,6 +2420,10 @@ input{
   padding-top: 90px;
   padding-bottom: 70px;
 
+  @include for-768{
+    padding-top: 35px;
+  }
+
   &__inner{
     display: flex;
     justify-content: center;
@@ -2703,6 +2795,7 @@ input{
 
     @include for-992{
       flex-direction: column;
+      padding-top: 135px;
     }
   }
 
@@ -2716,6 +2809,7 @@ input{
     @include for-992{
       padding: 0;
       margin-bottom: 20px;
+      display: none;
     }
 
   }
@@ -2889,6 +2983,10 @@ input{
     display: flex;
     margin: 0 -10px;
     margin-bottom: 50px;
+
+    @include for-550{
+      display: none;
+    }
   }
 
   &__personal-tab-i{
@@ -2916,10 +3014,18 @@ input{
       text-align: center;
       color: #80766A;
       margin-right: 10px;
+
+      @include for-768{
+        margin-right: 8px;
+      }
     }
 
     svg{
       margin-left: 20px;
+
+      @include for-768{
+        margin-left: 14px;
+      }
       path{
         fill: #989086;
       }
@@ -2969,8 +3075,53 @@ input{
     }
   }
 
+  &__personal-tab-mobile{
+
+    @include from-550{
+      display: none;
+    }
+
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 22px;
+    position: relative;
+    color: #292620;
+    margin-bottom: 20px;
+
+    span{
+      color: #292620;
+      background-color: $yellow;
+    }
+
+    span {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: FuturaMediumC, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 22px;
+      text-align: center;
+      margin-right: 10px;
+      color: #292620;
+      background-color: $yellow;
+    }
+  }
+
   &__personal-step{
     display: none;
+
+    @include for-550{
+      padding: 0 15px;
+    }
 
     &.active{
       display: flex;
@@ -2984,9 +3135,17 @@ input{
       .site-form__row-inner{
         width: auto;
       }
-
       .site-form__input{
         max-width: 100%;
+      }
+
+      @include for-550{
+        align-items: center;
+
+        .site-form__row{
+          max-width: 100%;
+          width: 100%;
+        }
       }
     }
   }
@@ -3000,6 +3159,15 @@ input{
     display: flex;
     color: #242E24;
     margin-bottom: 15px;
+
+
+    @include for-550{
+      text-align: center;
+      justify-content: center;
+      font-size: 24px;
+      line-height: 26px;
+      margin-bottom: 10px;
+    }
   }
 
   &__personal-txt{
@@ -3007,6 +3175,18 @@ input{
     line-height: 22px;
     color: #272F27;
     margin-bottom: 25px;
+
+    @include for-550{
+      text-align: center;
+      justify-content: center;
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 20px;
+
+      a{
+        display: block;
+      }
+    }
 
     span{
       font-family: FuturaMediumC, sans-serif;
@@ -3045,6 +3225,11 @@ input{
     transition: .3s;
     margin-bottom: 20px;
 
+    @include for-550{
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
     svg{
       margin-right: 8px;
 
@@ -3071,6 +3256,11 @@ input{
   &__content{
     padding-top: 95px;
     padding-bottom: 95px;
+
+    @include for-768{
+      padding-top: 130px;
+      padding-bottom: 80px;
+    }
   }
 
   &__inner{
@@ -3089,10 +3279,20 @@ input{
     align-items: center;
     margin-bottom: 32px;
 
+    @include for-768{
+      width: 60px;
+      height: 60px;
+    }
+
 
     svg{
       height: 32px;
       width: 40px;
+
+      @include for-768{
+        width: 25px;
+        height: 20px;
+      }
     }
   }
 
@@ -3107,6 +3307,12 @@ input{
     text-align: center;
     color: #242E24;
     margin-bottom: 22px;
+
+    @include for-768{
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
   }
 
   &__number{
@@ -3115,6 +3321,10 @@ input{
     text-align: center;
     color: #272F27;
     margin-bottom: 40px;
+
+    @include for-768{
+      margin-bottom: 25px;
+    }
 
     span{
       font-weight: 600;
@@ -3126,11 +3336,21 @@ input{
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @include for-768{
+      max-width: 150px;
+      height: 50px;
+    }
   }
 
   &__btn-i{
     width: 100%;
     justify-content: center;
+
+    @include for-768{
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
 }
@@ -3143,6 +3363,10 @@ input{
     width: 100%;
     padding-top: 50px;
     padding-bottom: 66px;
+
+    @include for-992{
+      padding-top: 85px;
+    }
   }
 
   &__title{
@@ -3156,6 +3380,10 @@ input{
     overflow: hidden;
     position: relative;
     margin-bottom: 25px;
+
+    @include for-992{
+      margin-top: 20px;
+    }
 
 
     .menu__item{
@@ -3183,6 +3411,42 @@ input{
 
   &__btn-i{
 
+    @include for-550{
+      min-height: 58px;
+    }
+  }
+
+  @include for-550{
+    .menu__item-portions{
+      width: 55px;
+      height: 55px;
+      font-size: 11px;
+      line-height: 11px;
+      right: 10px;
+      top: 10px;
+    }
+
+    .menu__item-img{
+
+      img{
+        width: 96px;
+        height: 96px;
+      }
+    }
+
+    .menu__item-category-i{
+      padding: 4px 3px;
+    }
+
+    .menu__item-name{
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    .menu__item-desc{
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 
 }
@@ -3326,12 +3590,20 @@ input{
     width: fit-content;
     margin: 0 auto;
     margin-top: 150px;
+
+    @include for-768{
+      margin-top: 30px;
+    }
   }
 
   &__inner{
     width: 100%;
     box-sizing: border-box;
     position: relative;
+
+    @include for-768{
+      width: calc(100% - 30px);
+    }
   }
 
   &__content{
@@ -3378,6 +3650,11 @@ input{
     background: #FFFFFF;
     border-radius: 25px;
     width: 680px;
+
+    @include for-768{
+      padding-top: 30px;
+      width: 100%;
+    }
   }
 
   &__title{
@@ -3389,12 +3666,22 @@ input{
     text-align: center;
     color: #242E24;
     width: 100%;
+
+    @include for-768{
+      font-size: 24px;
+      line-height: 26px;
+    }
   }
 
   &__list-wrap{
     margin-top: 28px;
     max-height: 525px;
     padding: 0 20px 0 50px;
+
+    @include for-768{
+      padding: 0 20px 0 20px;
+      max-height: 400px;
+    }
   }
 
   &__list{
@@ -3405,6 +3692,10 @@ input{
     padding: 0 7px;
     margin-bottom: 14px;
     width: 50%;
+
+    @include for-550{
+      width: 100%;
+    }
   }
 
   .menu__item-content{
@@ -3479,6 +3770,10 @@ input{
     margin-bottom: 0;
     margin-right: 35px;
 
+    @include for-768{
+      margin-right: 20px;
+    }
+
     &:hover{
 
       .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
@@ -3500,6 +3795,11 @@ input{
     justify-content: center;
     border-radius: 40px 40px 25px 25px;
 
+    @include for-550{
+      height: 55px;
+      border-radius: 40px 40px 35px 35px;
+    }
+
     span{
       font-family: FuturaMediumC, sans-serif;
       font-style: normal;
@@ -3514,9 +3814,20 @@ input{
 
 .dish-detail{
 
+  @include for-768{
+    .popup__body{
+      margin-top: 100px;
+      width: 100%;
+    }
+  }
+
   &__content{
     width: 600px;
     border-radius: 25px;
+
+    @include for-768{
+      width: 100%;
+    }
   }
 
   .card-detail__content{
@@ -3524,7 +3835,11 @@ input{
     position: relative;
     padding-top: 70px;
     padding-left: 70px;
-    padding-right: 80px;
+    padding-right: 70px;
+
+    @include for-550{
+      padding: 45px 15px 15px 20px;
+    }
   }
 
   .card-detail__img{
@@ -3538,9 +3853,21 @@ input{
     top: -70px;
     overflow: hidden;
 
+    @include for-550{
+      width: 82px;
+      height: 82px;
+      top: -41px;
+    }
+
     img{
       width: 140px;
       height: 140px;
+
+
+      @include for-550{
+        width: 82px;
+        height: 82px;
+      }
     }
   }
 
@@ -3550,6 +3877,10 @@ input{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include for-992{
+      padding-right: 0;
+    }
   }
 
   .card-detail__category a.menu__item-category-i{
@@ -3559,12 +3890,30 @@ input{
 
   .card-detail__name{
     text-align: center;
+
+    @include for-550{
+      font-size: 20px;
+      line-height: 22px;
+    }
   }
 
   .card-detail__row-info{
     border: 0;
     padding-bottom: 0;
     margin-bottom: 0;
+
+    @include for-768{
+      font-size: 12px;
+      line-height: 12px;
+
+      span{
+        display: inline-flex;
+
+        svg{
+          display: inline-flex;
+        }
+      }
+    }
   }
 
   .card-detail__tab{
@@ -3575,6 +3924,11 @@ input{
     padding-left: 60px;
     padding-right: 40px;
     max-width: 100%;
+
+    @include for-768{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   .card-detail__tab-wrap{
@@ -3615,5 +3969,18 @@ input{
   .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
     background-color: $green;
   }
+
+  @include for-768{
+
+    .card-detail__tab{
+      height: 50px;
+    }
+
+    .card-detail__tab-i{
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
 
 }
